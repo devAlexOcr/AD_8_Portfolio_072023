@@ -1,0 +1,26 @@
+#home {
+    background-image: url('./assets/images/branding_home.png');
+    width: 100vw;
+    height: 100vh;
+    background-position: center;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    height: 15vh !important;
+    transition: height 600ms;
+}
+
+#entry {
+    position: relative;
+    top: 150px;
+    width: 15vw;
+    height: 5vh;
+    font-size: 2rem;
+    border: none;
+    background: none;
+    color: #C69C2D;
+    cursor: pointer;
+}

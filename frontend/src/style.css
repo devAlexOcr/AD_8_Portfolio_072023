@@ -1,0 +1,85 @@
+#home {
+  background-image: url("./assets/images/branding_home.png");
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  height: 15vh !important;
+  transition: height 600ms;
+}
+
+#entry {
+  position: relative;
+  top: 150px;
+  width: 15vw;
+  height: 5vh;
+  font-size: 2rem;
+  border: none;
+  background: none;
+  color: #C69C2D;
+  cursor: pointer;
+}
+
+header {
+  width: 100vw;
+  height: 15vh;
+  position: fixed;
+  top: 0;
+}
+
+nav {
+  display: none;
+  justify-content: right;
+  font-size: 2rem;
+  width: 90vw;
+  height: 12vh;
+  margin: auto;
+  align-items: center;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 20px;
+}
+
+#presentation {
+  width: 90vw;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+}
+
+#description {
+  display: flex;
+  justify-content: center;
+  width: 90vw;
+  margin: 7vh auto;
+  height: 200vh;
+  position: relative;
+  top: 15vh;
+  z-index: -1;
+}
+
+#portrait {
+  width: 60vw;
+  height: 70vh;
+  background-color: blue;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+/*# sourceMappingURL=style.css.map */

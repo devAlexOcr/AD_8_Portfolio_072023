@@ -1,0 +1,21 @@
+header {
+    width: 100vw;
+    height: 15vh;
+    position: fixed;
+    top: 0;
+}
+
+nav {
+    display: none;
+    justify-content: right;
+    font-size: 2rem;
+    width: 90vw;
+    height: 12vh;
+    margin: auto;
+    align-items: center;
+    a {
+        color: white;
+        text-decoration: none;
+        margin: 20px;
+    }
+}
