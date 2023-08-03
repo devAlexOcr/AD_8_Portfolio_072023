@@ -4,20 +4,41 @@
     margin: auto;
     display: flex;
 }
+.open{
+    height: 71vh;
+    top: 22vh;
+    opacity: 1!important;
+    transition: opacity 3s;
+    transition-delay: 400ms;
+}
+.close{
+    height: 0;
+    top: 100vh;
+    transition: top 200ms;
+}
 #description {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     width: 90vw;
-    margin: 7vh auto;
-    height: 200vh;
+    margin: auto;
     position: relative;
-    top: 15vh;
-    z-index: -1;
+    overflow: hidden;
+    opacity: 0;
+    p {
+        width: 50vw;
+        font-size: 2rem;
+        padding: 90px;
+    }
 }
 
 #portrait {
-    width: 60vw;
-    height: 70vh;
-    background-color: blue;
-    // background-image: url('../assets/images/portrait.webp');
+    width: 27vw;
+    height: 27vw;
+    background: #6495ed;
+    opacity: 0.5;
+    position: relative;
+    top: 6vh;
+    left: 1vw;
+    border-radius: 250px;
+    box-shadow: 5px 5px 20px 4px;
 }

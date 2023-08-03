@@ -1,0 +1,61 @@
+[
+    {
+        "id": "1",
+        "name": "Booki",
+        "description": "Création d'une page d'acceuil pour une agence de voyage",
+        "cover": "https://user.oc-static.com/upload/2022/06/20/16557256333819_FR_1155_P3_Banner-Booki.png",
+        "url": "https://devalexocr.github.io/AD_2_booki_102022/",
+        "languages": [
+            "Html",
+            "Css"
+        ]
+    },
+    {
+        "id": "2",
+        "name": "PortFolio de Sophie Bluel",
+        "description": "Création d'une page web dynamique",
+        "cover": "",
+        "url": "https://devalexocr.github.io/AD_3_PortFolio_SB_122022/",
+        "languages": [
+            "JavaScript",
+            "Html",
+            "Css"
+        ] 
+    },
+    {
+        "id": "3",
+        "name": "PortFolio de Nina Carducci",
+        "description": "Débuggage et optimisation du site",
+        "cover": "",
+        "url": "https://devalexocr.github.io/AD_5_Nina_carducci_032023/",
+        "languages": [
+            "JavaScript",
+            "Html",
+            "Css"
+        ] 
+    },
+    {
+        "id": "4",
+        "name": "Kasa",
+        "description": "Création d'une application web de location immobilière avec React",
+        "cover": "https://user.oc-static.com/upload/2022/06/24/16560899769906_FR_811_P8_Banner-Kasa%20%281%29.png",
+        "url": "https://devalexocr.github.io/AD_6_Kasa_042023/",
+        "languages": [
+            "JavaScript",
+            "Sass",
+            "Html"
+        ] 
+    },
+    {
+        "id": "5",
+        "name": "Mon vieux Grimoire",
+        "description": "Développement du back-end d'un site de notation de livres",
+        "cover": "",
+        "url": "",
+        "languages": [
+            "JavaScript",
+            "Html",
+            "Css"
+        ] 
+    }
+]

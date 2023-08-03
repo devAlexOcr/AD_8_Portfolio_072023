@@ -1,18 +1,20 @@
 import './presentation.scss';
+// import { useRef } from 'react';
 
-function Presentation() {
-    
+
+
+function Presentation({open}) {
+     
     return (
-        <section id="description">
+        <section  id="description" className={(open)? "open" : "close"} >
             <div id="portrait"></div>
             <p>
-                Après 10 ans de carrière dans les laboratoire d'analyse médicales,
-                 j'ai décidé de revenir a mon premier centre d'interet, l'informatique.
-                 En effet etant née dans les années 90 j'ai grandit en suivant l'evolution technologique 
-                 et aujourd'hui j'ai décidé de franchir le pas, et d'apprendre a comprendre ces technologie.
-
-
+                Après 10 ans de carrière dans les laboratoires d'analyses médicales,
+                 j'ai décidé de revenir à mon premier centre d'interet, l'informatique.
+                 En effet étant née dans les années 90 j'ai grandit en suivant l'evolution technologique 
+                 et aujourd'hui j'ai décidé de franchir le pas, et d'apprendre à comprendre ces technologies.
             </p>
+           
         </section>
     )
 }

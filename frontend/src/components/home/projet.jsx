@@ -1,31 +1,49 @@
 import React from 'react';
-import Swiper from 'react-id-swiper';
+import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import './projet.scss';
 
-import '../../../node_modules/swiper/swiper.scss';
 
-const CubeEffect = () => {
-    const params = {
-      effect: 'cube',
-      grabCursor: true,
-      cubeEffect: {
-        shadow: true,
-        slideShadows: true,
-        shadowOffset: 20,
-        shadowScale: 0.94,
-      },
-      pagination: {
-        el: '.swiper-pagination',
+
+function Projet({section}) {
+
+  const [Projets, setProjets] = useState([]);
+
+useEffect(() => {
+
+  fetch('datas/projets.json'
+  ,{
+      headers : { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
       }
-    }
+  })
+  .then(function(response){          
+      return response.json();
+  })
+  .then(function(data) {          
+    setProjets(data);
+  })
+}, [setProjets]);
+
+
     return (
-      <Swiper {...params}>
-        <div style={{ backgroundImage:'url(../../assets/images/frontend/src/assets/images/branding_home.png)' }} />
-        <div style={{ backgroundImage:'url(http://lorempixel.com/600/600/nature/2)' }} />
-        <div style={{ backgroundImage:'url(http://lorempixel.com/600/600/nature/3)' }} />
-        <div style={{ backgroundImage:'url(http://lorempixel.com/600/600/nature/4)' }} />
-        <div style={{ backgroundImage:'url(http://lorempixel.com/600/600/nature/5)' }} />
-      </Swiper>
+      <>
+      <section id='projet' className={(section)? "section_close" : "section_open"} >
+        <div id='preview_projet'>
+        </div>
+        <div id='titre_projet'>
+          <ul id='name_projet'>
+            {
+              Projets.map(projet => (
+                <li><Link>{projet.name}</Link></li>
+              ))
+            }
+          </ul>
+        </div>
+      </section>
+      </>
     )
   };
-  export default CubeEffect;
+  export default Projet;
     

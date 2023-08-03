@@ -1,6 +1,37 @@
 #projet {
     width: 90vw;
-    height: 85vh;
-    background-color: red;
+    height: 70vh;
+    position: relative;
+    top: 22vh;
     margin: auto;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+#preview_projet {
+    width: 45vw;
+    border: 2px solid black;
+    height: 40vh;
+    position: relative;
+    top: 29vh;
+    background: whitesmoke;
+}
+
+#titre_projet {
+    width: 45vw;
+}
+
+#name_projet {
+    li {
+        list-style: none;
+        opacity: 0.1;
+        cursor: pointer;
+        a {
+            text-decoration: none;
+            font-size: 3.5rem;
+        }
+    }
+    .selected {
+        opacity: 1;
+    }
 }

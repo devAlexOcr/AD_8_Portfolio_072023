@@ -6,6 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: height 600ms;
 }
 
 .header {
@@ -25,50 +26,12 @@
   cursor: pointer;
 }
 
-header {
-  width: 100vw;
-  height: 15vh;
-  position: fixed;
-  top: 0;
+.section_open {
+  display: flex !important;
 }
 
-nav {
-  display: none;
-  justify-content: right;
-  font-size: 2rem;
-  width: 90vw;
-  height: 12vh;
-  margin: auto;
-  align-items: center;
-}
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 20px;
-}
-
-#presentation {
-  width: 90vw;
-  height: 100vh;
-  margin: auto;
-  display: flex;
-}
-
-#description {
-  display: flex;
-  justify-content: center;
-  width: 90vw;
-  margin: 7vh auto;
-  height: 200vh;
-  position: relative;
-  top: 15vh;
-  z-index: -1;
-}
-
-#portrait {
-  width: 60vw;
-  height: 70vh;
-  background-color: blue;
+.section_close {
+  display: none !important;
 }
 
 body {
