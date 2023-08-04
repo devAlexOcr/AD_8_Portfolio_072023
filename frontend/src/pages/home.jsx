@@ -14,10 +14,17 @@ function Home({open, Projets}) {
 
     return (
         <>
-        <Presentation open={open} section={section} />
-        <Projet section={section} />
+        {
+        (section === true) ? 
+            <Presentation open={open} section={section} />
+        :
+            <>
+            <Projet section={section} />
+            </>
+        }
         <button onClick={next} >Next</button>
         </>
+
     )
 };
 
