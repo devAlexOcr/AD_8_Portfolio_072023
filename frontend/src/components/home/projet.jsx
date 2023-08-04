@@ -5,7 +5,7 @@ import './projet.scss';
 
 
 
-function Projet({section}) {
+function Projet() {
 
   const [Projets, setProjets] = useState([]);
 
@@ -29,14 +29,14 @@ useEffect(() => {
 
     return (
       <>
-      <section id='projet' className={(section)? "section_close" : "section_open"} >
+      <section id='projet' >
         <div id='preview_projet'>
         </div>
         <div id='titre_projet'>
           <ul id='name_projet'>
             {
               Projets.map(projet => (
-                <li><Link>{projet.name}</Link></li>
+                <li key={projet.id}><Link>{projet.name}</Link></li>
               ))
             }
           </ul>

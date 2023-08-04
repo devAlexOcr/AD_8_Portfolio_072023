@@ -7,16 +7,18 @@ import { useState } from 'react';
 function Home({open, Projets}) {
 
     const [section, updateSection] = useState(true)
-    console.log(Projets)
+console.log(section)
     const next= () => {
+        
         updateSection(!section)
     }
 
     return (
         <>
         {
+            
         (section === true) ? 
-            <Presentation open={open} section={section} />
+            <Presentation open={open} />
         :
             <>
             <Projet section={section} />
