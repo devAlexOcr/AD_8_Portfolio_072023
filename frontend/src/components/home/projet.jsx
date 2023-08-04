@@ -5,7 +5,8 @@ import './projet.scss';
 
 
 
-function Projet() {
+function Projet({section}) {
+  console.log(section)
 
   const [Projets, setProjets] = useState([]);
 
@@ -29,7 +30,7 @@ useEffect(() => {
 
     return (
       <>
-      <section id='projet' >
+      <section id='projet' className={(section)? "section_close" : "section_open"} >
         <div id='preview_projet'>
         </div>
         <div id='titre_projet'>

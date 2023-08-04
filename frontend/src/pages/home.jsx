@@ -7,7 +7,7 @@ import { useState } from 'react';
 function Home({open, Projets}) {
 
     const [section, updateSection] = useState(true)
-console.log(section)
+
     const next= () => {
         
         updateSection(!section)

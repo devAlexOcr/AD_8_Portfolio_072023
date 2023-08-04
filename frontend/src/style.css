@@ -27,11 +27,13 @@
 }
 
 .section_open {
-  display: flex !important;
+  opacity: 1 !important;
+  transition: opacity 2s;
 }
 
 .section_close {
   display: none !important;
+  opacity: 0 !important;
 }
 
 body {
