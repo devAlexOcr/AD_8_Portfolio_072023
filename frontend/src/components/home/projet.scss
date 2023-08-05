@@ -6,21 +6,20 @@
     top: 22vh;
     margin: auto;
     flex-direction: row;
-    overflow: hidden;
-    opacity: 0;
 }
 
 #preview_projet {
     width: 45vw;
     border: 2px solid black;
     height: 40vh;
-    position: relative;
-    top: 29vh;
+    position: fixed;
+    top: 50vh;
     background: whitesmoke;
 }
 
 #titre_projet {
     width: 45vw;
+    position: static;
 }
 
 #name_projet {

@@ -1,6 +1,6 @@
 import  { Link } from 'react-router-dom';
 import { useRef } from 'react';
-
+import Logo from '../../assets/images/logo_background_home.png.png'
 import './header.scss';
 
 
@@ -28,14 +28,16 @@ function Header({open, setOpen}) {
 
     return (
         <header>
-        <div id="home" ref={homeRef}> 
-        <button id='entry' ref={entryRef}  onClick={toggle}>Entry</button>  
-         
-        <nav ref={navRef}>
+            <div id="home" ref={homeRef}>
+                <div id='logo'>
+                    <img src={Logo} alt='logo AD' />
+                    <button id='entry' ref={entryRef}  onClick={toggle}>Entry</button>  
+                    <nav ref={navRef}>
             <Link to="/" ref={accueilRef} onClick={backHome}>Accueil</Link>
             <Link to="Contact">Contact</Link>   
-        </nav>   
-        </div>
+                    </nav>
+                </div>
+            </div> 
         </header>
     )
 }

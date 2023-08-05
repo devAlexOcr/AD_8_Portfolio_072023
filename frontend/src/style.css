@@ -1,8 +1,7 @@
 #home {
-  background-image: url("./assets/images/branding_home.png");
+  background: radial-gradient(circle, rgb(3, 30, 54) 0%, rgb(0, 0, 0) 100%);
   width: 100vw;
   height: 100vh;
-  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,17 +12,30 @@
   height: 15vh !important;
   transition: height 600ms;
 }
+.header img {
+  position: relative;
+  top: 40px;
+  right: 70px;
+}
+
+#logo {
+  display: flex;
+  flex-direction: column;
+}
+#logo img {
+  width: 30vw;
+}
 
 #entry {
-  position: relative;
-  top: 150px;
   width: 15vw;
   height: 5vh;
+  margin: auto;
   font-size: 2rem;
   border: none;
   background: none;
   color: #C69C2D;
   cursor: pointer;
+  text-shadow: #C69C2D 0px 0px 20px;
 }
 
 .section_open {
