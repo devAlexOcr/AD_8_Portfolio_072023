@@ -1,6 +1,7 @@
 import  { Link } from 'react-router-dom';
 import { useRef } from 'react';
-import Logo from '../../assets/images/logo_background_home.png.png'
+import Logo from '../../assets/images/logo/custom_logo_partie_1.png'
+import LogoText from '../../assets/images/logo/custom_logo_partie_2.png'
 import './header.scss';
 
 
@@ -10,10 +11,14 @@ function Header({open, setOpen}) {
     const entryRef = useRef();
     const navRef = useRef();
     const accueilRef = useRef();
+    const logo1 = useRef();
+    const logo2 = useRef();
 
     const toggle = () => {
         setOpen(!open); 
         homeRef.current.classList.add('header')
+        logo1.current.classList.remove('animation_LogoImg')
+        logo2.current.classList.remove('animation_LogoText')
         entryRef.current.style.display ='none'
         // prevoir la redirection vers le path /home
         navRef.current.style.display ='flex'
@@ -29,8 +34,11 @@ function Header({open, setOpen}) {
     return (
         <header>
             <div id="home" ref={homeRef}>
+                <div id='acceuil'>
                 <div id='logo'>
-                    <img src={Logo} alt='logo AD' />
+                    <img id='logo1' ref={logo1} className='animation_LogoImg' src={Logo} alt='logo fleche bas et fleche haut encerclées' />
+                    <img id='logo2' ref={logo2} className='animation_LogoText' src={LogoText} alt='Alexandre Pauc Detoc' />
+                </div>
                     <button id='entry' ref={entryRef}  onClick={toggle}>Entry</button>  
                     <nav ref={navRef}>
             <Link to="/" ref={accueilRef} onClick={backHome}>Accueil</Link>

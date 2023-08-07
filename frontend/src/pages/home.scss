@@ -17,8 +17,51 @@
         right: 70px;
     }
 }
-
 #logo {
+    display: flex;
+    align-items: center;
+    #logo1{
+        width: 10vw;
+    }
+}
+.animation_LogoImg{
+    animation-name: opacityLogo, translateX;
+    animation-duration: 2500ms, 2s;
+    animation-delay: 0s, 2s;
+    animation-fill-mode: forwards;
+}
+.animation_LogoText{
+    position: absolute;
+    left: 600px;
+    height: 14vh;
+    opacity: 0;
+    animation-name: opacityLogo;
+    animation-duration: 3s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+}
+@keyframes translateX{
+    from {
+        transform: translateX(0px);
+        transition-timing-function: ease-in-out;
+
+    }
+    to {
+        transform: translateX(-250px);
+        transition-timing-function: ease-in-out;
+
+    }
+}
+@keyframes opacityLogo{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#acceuil {
     display: flex;
     flex-direction: column;
     img {
@@ -29,6 +72,7 @@
 #entry {
     width: 15vw;
     height: 5vh;
+    opacity: 0;
     margin: auto;
     font-size: 2rem;
     border: none;
@@ -36,6 +80,12 @@
     color: #C69C2D;
     cursor: pointer;
     text-shadow: #C69C2D 0px 0px 20px;
+    position: relative;
+    top: 15vh;
+    animation-name: opacityLogo;
+    animation-duration: 3s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
 }
 
 .section_open{
