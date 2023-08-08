@@ -1,25 +1,23 @@
 #projet {
     display: flex;
     width: 90vw;
-    height: 70vh;
-    position: relative;
-    top: 22vh;
+    height: 85vh;
     margin: auto;
     flex-direction: row;
+    overflow: hidden;
 }
 
 #preview_projet {
     width: 45vw;
     border: 2px solid black;
     height: 40vh;
-    position: fixed;
     top: 50vh;
     background: whitesmoke;
+    z-index: -1;
 }
 
 #titre_projet {
     width: 45vw;
-    position: static;
 }
 
 #name_projet {
@@ -38,4 +36,11 @@
     .selected {
         opacity: 1;
     }
+}
+
+.open_section{
+    display: flex;
+}
+.close_section{
+    display: none!important;
 }

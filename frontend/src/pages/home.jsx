@@ -1,7 +1,8 @@
-import Projet from '../components/home/projet.jsx';
-import Presentation from '../components/home/presentation.jsx';
 import { useState } from 'react';
 
+import Presentation from '../components/home/presentation.jsx';
+import Competence from '../components/home/competence.jsx';
+import Projet from '../components/home/projet.jsx';
 
 
 function Home({open, Projets}) {
@@ -14,19 +15,13 @@ function Home({open, Projets}) {
     }
 
     return (
-        <>
-        {
-            
-        (section === true) ? 
+        <main>
+ 
             <Presentation open={open} />
-        :
-            <>
-            <Projet section={section} />
-            </>
-        }
-        <button onClick={next} >Next</button>
-        </>
+            <Competence open={open} />
+            <Projet open={open} />
 
+        </main>    
     )
 };
 

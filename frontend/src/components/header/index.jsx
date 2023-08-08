@@ -39,10 +39,11 @@ function Header({open, setOpen}) {
                     <img id='logo1' ref={logo1} className='animation_LogoImg' src={Logo} alt='logo fleche bas et fleche haut encerclées' />
                     <img id='logo2' ref={logo2} className='animation_LogoText' src={LogoText} alt='Alexandre Pauc Detoc' />
                 </div>
-                    <button id='entry' ref={entryRef}  onClick={toggle}>Entry</button>  
+                    <Link to ='/' id='entry' ref={entryRef}  onClick={toggle}>Entry</Link>  
                     <nav ref={navRef}>
-            <Link to="/" ref={accueilRef} onClick={backHome}>Accueil</Link>
-            <Link to="Contact">Contact</Link>   
+                        <Link to="/" ref={accueilRef} onClick={backHome}>Accueil</Link>
+                        <Link to="Contact">Contact</Link> 
+                        <Link to="/Login">Login</Link>  
                     </nav>
                 </div>
             </div> 

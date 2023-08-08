@@ -29,7 +29,7 @@
 .animation_LogoImg {
   animation-name: opacityLogo, translateX;
   animation-duration: 2500ms, 2s;
-  animation-delay: 0s, 2s;
+  animation-delay: 0s, 1300ms;
   animation-fill-mode: forwards;
 }
 
@@ -39,19 +39,18 @@
   height: 14vh;
   opacity: 0;
   animation-name: opacityLogo;
-  animation-duration: 3s;
-  animation-delay: 4s;
+  animation-duration: 2500ms;
+  animation-delay: 3500ms;
   animation-fill-mode: forwards;
 }
 
 @keyframes translateX {
   from {
     transform: translateX(0px);
-    transition-timing-function: ease-in-out;
+    animation-timing-function: cubic-bezier(0.14, 0.01, 0.01, 0.98);
   }
   to {
-    transform: translateX(-250px);
-    transition-timing-function: ease-in-out;
+    transform: translateX(-230px);
   }
 }
 @keyframes opacityLogo {
@@ -60,6 +59,14 @@
   }
   to {
     opacity: 1;
+  }
+}
+@keyframes opacityEntry {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
 #acceuil {
@@ -71,34 +78,31 @@
 }
 
 #entry {
-  width: 15vw;
-  height: 5vh;
   opacity: 0;
+  text-decoration: none;
   margin: auto;
   font-size: 2rem;
-  border: none;
-  background: none;
   color: #C69C2D;
   cursor: pointer;
   text-shadow: #C69C2D 0px 0px 20px;
   position: relative;
   top: 15vh;
-  animation-name: opacityLogo;
-  animation-duration: 3s;
+  animation-name: opacityEntry;
+  animation-duration: 1300ms;
   animation-delay: 5s;
-  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
 }
 
-.section_open {
-  opacity: 1 !important;
-  transition: opacity 2s;
+main {
+  z-index: -1;
+  position: relative;
+  top: 20vh;
 }
 
-.section_close {
-  display: none !important;
-  opacity: 0 !important;
+@font-face {
+  font-family: AudioWide;
+  src: url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
 }
-
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;

@@ -1,7 +1,10 @@
 @import './function.scss';
 @import '../src/pages/home.scss';
 
-
+@font-face {
+  font-family: AudioWide;
+  src: url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+}
 
 body {
     margin: 0;
