@@ -8,11 +8,11 @@
 #competence {
     flex-direction: column;
     height: 85vh;
-    background-color: bisque;
+    background-image: url('../../assets/images/17973903.jpg');
+    background-position: center;
+    background-size: cover;
+    color: white;
     h2 {
-        font-family: AudioWide;
-        font-weight: 800;
-        font-size: 4rem;
         text-align: center;
     }
 }
@@ -21,8 +21,12 @@
     display: flex;
     justify-content: space-around;
     h3 {
-        font-family: AudioWide!important;
-        font-size: 1.5rem;
-        font-weight: 800;
+        text-align: center;
+    }
+    ul {
+        list-style: none;
+        font-size: 2rem;
+        padding: 0;
+        text-align: center;
     }
 }
