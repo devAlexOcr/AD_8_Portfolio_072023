@@ -3,9 +3,9 @@ import './login.scss'
 function Login() {
     
     return (
-        <div id="login">
+        <section id="login">
            <p>formulaire de connexion</p>
-        </div>
+        </section>
     )
 };
 

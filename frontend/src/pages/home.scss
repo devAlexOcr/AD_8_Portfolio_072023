@@ -13,8 +13,8 @@
     transition: height 600ms;
     img {
         position: relative;
-        top: 40px;
-        right: 70px;
+        top: 6vh;
+        right: 4vw;
     }
 }
 #logo {
@@ -90,20 +90,3 @@
     animation-iteration-count: infinite;
 }
 
-main{
-    z-index: -1;
-    position: relative;
-    top: 20vh;
-}
-
-h2 {
-    font-family: AudioWide;
-    font-weight: 800;
-    font-size: 4rem;
-}
-
-h3 {
-    font-family: AudioWide!important;
-    font-size: 1.5rem;
-    font-weight: 800;
-}

@@ -29,7 +29,7 @@ useEffect(() => {
 
 
     return (
-      <>
+      
     <section id='projet' className={(open)? "open_section" : "close_section"} >
       <h2>Projets</h2>
         <div id='preview_projet'>
@@ -44,7 +44,7 @@ useEffect(() => {
           </ul>
         </div>
       </section>
-      </>
+    
     )
   };
   export default Projet;

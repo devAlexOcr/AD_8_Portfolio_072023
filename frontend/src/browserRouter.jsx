@@ -17,6 +17,7 @@ function App() {
     return (
         <BrowserRouter>
             <Header open={open} setOpen={setOpen} />
+            <main>
                 <Routes>
                     <Route path='/' element={<Home open={open} />} />
                     <Route path='/projet' element={<Projet />} />
@@ -24,6 +25,7 @@ function App() {
                     <Route path='/login' element={<Login />} />
                     <Route path='*' element={<Error />} />
                 </Routes>
+            </main>
         </BrowserRouter>
     )
 }

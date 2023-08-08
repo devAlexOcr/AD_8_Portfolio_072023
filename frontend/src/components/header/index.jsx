@@ -28,12 +28,13 @@ function Header({open, setOpen}) {
         setOpen(false)
         homeRef.current.classList.remove('header')
         entryRef.current.style.display ='block'
+        entryRef.current.style.opacity ='1'
         navRef.current.style.display ='none'
     }
 
     return (
         <header>
-            <div id="home" ref={homeRef}>
+            <section id="home" ref={homeRef}>
                 <div id='acceuil'>
                 <div id='logo'>
                     <img id='logo1' ref={logo1} className='animation_LogoImg' src={Logo} alt='logo fleche bas et fleche haut encerclées' />
@@ -46,7 +47,7 @@ function Header({open, setOpen}) {
                         <Link to="/Login">Login</Link>  
                     </nav>
                 </div>
-            </div> 
+            </section> 
         </header>
     )
 }

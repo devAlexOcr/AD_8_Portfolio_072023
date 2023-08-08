@@ -15,13 +15,11 @@ function Home({open, Projets}) {
     }
 
     return (
-        <main>
- 
+        <>
             <Presentation open={open} />
             <Competence open={open} />
             <Projet open={open} />
-
-        </main>    
+        </>    
     )
 };
 
