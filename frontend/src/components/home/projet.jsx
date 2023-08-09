@@ -32,16 +32,18 @@ useEffect(() => {
       
     <section id='projet' className={(open)? "open_section" : "close_section"} >
       <h2>Projets</h2>
-        <div id='preview_projet'>
-        </div>
-        <div id='titre_projet'>
-          <ul id='name_projet'>
-            {
+        <div id='container'>
+          <div id='preview_projet'>
+          </div>
+          <div id='titre_projet'>
+            <ul id='name_projet'>
+              {
               Projets.map(projet => (
                 <li key={projet.id}><Link>{projet.name}</Link></li>
               ))
-            }
-          </ul>
+              }
+            </ul>
+          </div>
         </div>
       </section>
     

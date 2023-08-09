@@ -7,7 +7,10 @@ import Contact from '../src/pages/contact.jsx';
 import Login from '../src/pages/login.jsx';
 import Error from '../src/pages/error.jsx';
 
+
 import Header from '../src/components/header/index.jsx';
+import Footer from '../src/components/footer/footer.jsx';
+
 import { useState } from 'react';
 
 function App() {
@@ -26,6 +29,7 @@ function App() {
                     <Route path='*' element={<Error />} />
                 </Routes>
             </main>
+            <Footer />
         </BrowserRouter>
     )
 }

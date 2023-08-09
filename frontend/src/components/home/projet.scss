@@ -1,16 +1,14 @@
 #projet {
-    display: grid;
-    // grid-template: 
-    //     [h2-left] "h2 div" 30px [div-right]
-    //     [div-left] "div div" 1fr [div-right]
-    //      ;
     width: 90vw;
     height: 85vh;
     margin: auto;
-
-    h2 {
-        background-color: red;
-    }
+    flex-direction: column;
+}
+#container{
+    display: flex;
+    height: 58vh;
+    width: 90vw;
+    justify-content: space-between;
 }
 
 #preview_projet {
@@ -20,11 +18,16 @@
     background: whitesmoke;
     z-index: -1;
     background-color: lightblue;
+    position: relative;
+    top: 17vh;
 }
 
 #titre_projet {
     width: 45vw;
-    background-color: limegreen;
+    height: 86vh;
+    position: relative;
+    top: -29vh;
+    overflow: hidden;
 }
 
 #name_projet {
