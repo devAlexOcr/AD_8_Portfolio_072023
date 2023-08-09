@@ -9,6 +9,7 @@
 }
 
 .header {
+    z-index: 3;
     height: 15vh !important;
     transition: height 600ms;
     #logo1 {

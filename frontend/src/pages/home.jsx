@@ -5,14 +5,7 @@ import Competence from '../components/home/competence.jsx';
 import Projet from '../components/home/projet.jsx';
 
 
-function Home({open, Projets}) {
-
-    const [section, updateSection] = useState(true)
-
-    const next= () => {
-        
-        updateSection(!section)
-    }
+function Home({open}) {
 
     return (
         <>

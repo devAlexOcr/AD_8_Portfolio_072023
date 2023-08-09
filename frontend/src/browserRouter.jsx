@@ -13,14 +13,20 @@ import Footer from '../src/components/footer/footer.jsx';
 
 import { useState } from 'react';
 
+
 function App() {
+
+
+
    const [open, setOpen] = useState(false)
+   const [main, setMain] = useState(false)
+   console.log(main)
 
 
     return (
         <BrowserRouter>
-            <Header open={open} setOpen={setOpen} />
-            <main>
+            <Header open={open} setOpen={setOpen} main={main} setMain={setMain} />
+            <main className={main? 'open_main' : 'close_main'} >
                 <Routes>
                     <Route path='/' element={<Home open={open} />} />
                     <Route path='/projet' element={<Projet />} />

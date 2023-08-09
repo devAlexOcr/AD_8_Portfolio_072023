@@ -5,7 +5,7 @@ import LogoText from '../../assets/images/logo/custom_logo_partie_2.png'
 import './header.scss';
 
 
-function Header({open, setOpen}) {
+function Header({open, setOpen, main, setMain}) {
 
     const homeRef = useRef();
     const entryRef = useRef();
@@ -16,7 +16,8 @@ function Header({open, setOpen}) {
     const logo2 = useRef();
 
     const toggle = () => {
-        setOpen(!open); 
+        setMain(!open)
+        setOpen(!open)
         homeRef.current.classList.add('header')
         logo1.current.classList.remove('animation_LogoImg')
         logo2.current.classList.remove('animation_LogoText')
@@ -27,6 +28,7 @@ function Header({open, setOpen}) {
     } 
 
     const backHome =() => {
+        setMain(false)
         setOpen(false)
         entryRef.current.add()
         entryRef.current.style.opacity ='1'
