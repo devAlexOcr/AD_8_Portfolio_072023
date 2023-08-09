@@ -1,25 +1,30 @@
 #projet {
-    display: flex;
+    display: grid;
+    // grid-template: 
+    //     [h2-left] "h2 div" 30px [div-right]
+    //     [div-left] "div div" 1fr [div-right]
+    //      ;
     width: 90vw;
     height: 85vh;
     margin: auto;
-    flex-direction: row;
-    overflow: hidden;
+
+    h2 {
+        background-color: red;
+    }
 }
 
 #preview_projet {
     width: 45vw;
     border: 2px solid black;
     height: 40vh;
-    position: relative;
-    top: 42vh;
-    right: 17vw;
     background: whitesmoke;
     z-index: -1;
+    background-color: lightblue;
 }
 
 #titre_projet {
     width: 45vw;
+    background-color: limegreen;
 }
 
 #name_projet {

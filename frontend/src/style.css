@@ -12,18 +12,21 @@
   height: 15vh !important;
   transition: height 600ms;
 }
-.header img {
-  position: relative;
-  top: 6vh;
-  right: 4vw;
+.header #logo1 {
+  width: 7vw !important;
+}
+.header #logo2 {
+  width: 20vw !important;
+}
+.header #accueil {
+  width: 90vw;
+  height: 15vh;
+  justify-content: space-between;
 }
 
 #logo {
   display: flex;
   align-items: center;
-}
-#logo #logo1 {
-  width: 10vw;
 }
 
 .animation_LogoImg {
@@ -50,7 +53,7 @@
     animation-timing-function: cubic-bezier(0.14, 0.01, 0.01, 0.98);
   }
   to {
-    transform: translateX(-230px);
+    transform: translateX(-260px);
   }
 }
 @keyframes opacityLogo {
@@ -69,12 +72,15 @@
     opacity: 0;
   }
 }
-#acceuil {
+#accueil {
   display: flex;
   flex-direction: column;
 }
-#acceuil img {
-  width: 30vw;
+#accueil #logo1 {
+  width: 15vw;
+}
+#accueil #logo2 {
+  width: 35vw;
 }
 
 #entry {

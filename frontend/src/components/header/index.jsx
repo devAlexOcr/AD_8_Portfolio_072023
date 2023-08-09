@@ -10,6 +10,7 @@ function Header({open, setOpen}) {
     const homeRef = useRef();
     const entryRef = useRef();
     const navRef = useRef();
+    const accueil = useRef();
     const accueilRef = useRef();
     const logo1 = useRef();
     const logo2 = useRef();
@@ -19,23 +20,24 @@ function Header({open, setOpen}) {
         homeRef.current.classList.add('header')
         logo1.current.classList.remove('animation_LogoImg')
         logo2.current.classList.remove('animation_LogoText')
-        entryRef.current.style.display ='none'
+        entryRef.current.remove()
+        accueil.current.style.flexDirection ='row'
         // prevoir la redirection vers le path /home
         navRef.current.style.display ='flex'
     } 
 
     const backHome =() => {
         setOpen(false)
-        homeRef.current.classList.remove('header')
-        entryRef.current.style.display ='block'
+        entryRef.current.add()
         entryRef.current.style.opacity ='1'
         navRef.current.style.display ='none'
+        homeRef.current.classList.remove('header')
     }
 
     return (
         <header>
             <section id="home" ref={homeRef}>
-                <div id='acceuil'>
+                <div id='accueil' ref={accueil} >
                 <div id='logo'>
                     <img id='logo1' ref={logo1} className='animation_LogoImg' src={Logo} alt='logo fleche bas et fleche haut encerclées' />
                     <img id='logo2' ref={logo2} className='animation_LogoText' src={LogoText} alt='Alexandre Pauc Detoc' />
