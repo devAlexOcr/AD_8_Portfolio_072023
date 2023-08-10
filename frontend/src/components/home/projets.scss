@@ -17,8 +17,6 @@
     height: 40vh;
     background: whitesmoke;
     background-color: lightblue;
-    position: relative;
-    top: 17vh;
     object-fit: cover;
 }
 
@@ -53,4 +51,12 @@
 }
 .close_section{
     display: none!important;
+}
+
+#name_projet {
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1vh;
 }

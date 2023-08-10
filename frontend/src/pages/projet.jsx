@@ -1,6 +1,10 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
+import './projet.scss';
+
+import Html from '../assets/images/logo/html5_logo.png';
+import Css from '../assets/images/logo/css3_logo.png';
 
 function Projet({projet}) {
 
@@ -35,7 +39,14 @@ function Projet({projet}) {
     console.log(Projet)
     return (
         <section id="projet">
-           <img src={Projet.cover} alt={Projet.name} />
+           <img id='cover_img' src={Projet.cover} alt={Projet.name} />
+            <div id='info_projet'>
+                <img className='logo' src={Html} alt='logo Html 5' />
+                <img className='logo' src={Css} alt='logo Css 3'/>                
+            </div>
+           <div id='projet_description'>
+            <p></p>
+           </div>
         </section>
     )
 };

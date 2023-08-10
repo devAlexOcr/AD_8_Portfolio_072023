@@ -1,0 +1,28 @@
+#projet {
+    width: 90vw;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1vh;
+    #cover_img {
+        width: 50vw;
+        box-shadow: 10px 10px 15px grey;
+    }
+}
+
+#info_projet {
+    display: flex;
+    
+    width: 39vw;
+}
+
+#projet_description {
+    border: 1px solid black;
+    height: 50vh;
+    width: 100vw;
+}
+.logo {
+    width: auto !important;
+    filter: drop-shadow(10px 10px 10px grey);
+}

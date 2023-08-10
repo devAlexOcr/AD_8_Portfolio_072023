@@ -27,15 +27,6 @@ function Header({open, setOpen, main, setMain}) {
         navRef.current.style.display ='flex'
     } 
 
-    const backHome =() => {
-        setMain(false)
-        setOpen(false)
-        entryRef.current.add()
-        entryRef.current.style.opacity ='1'
-        navRef.current.style.display ='none'
-        homeRef.current.classList.remove('header')
-    }
-
     return (
         <header>
             <section id="home" ref={homeRef}>
@@ -46,7 +37,7 @@ function Header({open, setOpen, main, setMain}) {
                 </div>
                     <Link to ='/' id='entry' ref={entryRef}  onClick={toggle}>Entry</Link>  
                     <nav ref={navRef}>
-                        <Link to="/" ref={accueilRef} onClick={backHome}>Accueil</Link>
+                        <Link to="/" ref={accueilRef} >Accueil</Link>
                         <Link to="Contact">Contact</Link> 
                         <Link to="/Login">Login</Link>  
                     </nav>
