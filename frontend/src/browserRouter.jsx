@@ -20,7 +20,7 @@ function App() {
 
    const [open, setOpen] = useState(false)
    const [main, setMain] = useState(false)
-   console.log(main)
+   
 
 
     return (
@@ -29,7 +29,7 @@ function App() {
             <main className={main? 'open_main' : 'close_main'} >
                 <Routes>
                     <Route path='/' element={<Home open={open} />} />
-                    <Route path='/projet' element={<Projet />} />
+                    <Route path='/projet/:id' element={<Projet />} />
                     <Route path='/contact' element={<Contact />} />
                     <Route path='/login' element={<Login />} />
                     <Route path='*' element={<Error />} />

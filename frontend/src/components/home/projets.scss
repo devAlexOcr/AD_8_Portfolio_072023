@@ -1,4 +1,4 @@
-#projet {
+#projets {
     width: 90vw;
     height: 85vh;
     margin: auto;
@@ -19,6 +19,7 @@
     background-color: lightblue;
     position: relative;
     top: 17vh;
+    object-fit: cover;
 }
 
 #titre_projet {

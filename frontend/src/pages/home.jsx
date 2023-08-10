@@ -1,17 +1,37 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import Presentation from '../components/home/presentation.jsx';
 import Competence from '../components/home/competence.jsx';
-import Projet from '../components/home/projet.jsx';
+import Projets from '../components/home/projets.jsx';
 
 
 function Home({open}) {
+
+    const [dataProjets, setProjets] = useState([]);
+  
+  useEffect(() => {
+  
+    fetch('datas/projets.json'
+    ,{
+        headers : { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        }
+    })
+    .then(function(response){          
+        return response.json();
+    })
+    .then(function(data) {          
+      setProjets(data);
+      
+    })
+  }, [setProjets]);
 
     return (
         <>
             <Presentation open={open} />
             <Competence open={open} />
-            <Projet open={open} />
+            <Projets open={open} dataProjets={dataProjets} />
         </>    
     )
 };
