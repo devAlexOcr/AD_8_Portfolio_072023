@@ -13,11 +13,12 @@
 
 #preview_projet {
     width: 45vw;
-    border: 2px solid black;
     height: 40vh;
-    background: whitesmoke;
-    background-color: lightblue;
-    object-fit: cover;
+    #img_preview {
+        width: 45vw;
+        box-shadow: 10px 10px 15px grey;
+        border-radius: 20px;
+    }
 }
 
 #titre_projet {

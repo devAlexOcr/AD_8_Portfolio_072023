@@ -2,60 +2,68 @@
     {
         "id": "1",
         "name": "Booki",
-        "description": "Création d'une page d'acceuil pour une agence de voyage",
+        "objectif": "Création d'une page d'acceuil pour une agence de voyage",
+        "description": "",
         "cover": "https://user.oc-static.com/upload/2022/06/20/16557256333819_FR_1155_P3_Banner-Booki.png",
         "url": "https://devalexocr.github.io/AD_2_booki_102022/",
         "languages": [
-            "Html",
-            "Css"
+            "../assets/logos/html5_logo.png",
+            "../assets/logos/css3_logo.png"
         ]
     },
     {
         "id": "2",
         "name": "PortFolio de Sophie Bluel",
-        "description": "Création d'une page web dynamique",
-        "cover": "",
+        "objectif": "Création d'une page web dynamique",
+        "description": "",
+        "cover": "../assets/images/portfolio_sophie_bluel.png",
         "url": "https://devalexocr.github.io/AD_3_PortFolio_SB_122022/",
         "languages": [
-            "JavaScript",
-            "Html",
-            "Css"
+            "../assets/logos/html5_logo.png",
+            "../assets/logos/css3_logo.png",
+            "../assets/logos/javascript_logo.png"
         ] 
     },
     {
         "id": "3",
         "name": "PortFolio de Nina Carducci",
-        "description": "Débuggage et optimisation du site",
+        "objectif": "Débuggage et optimisation du site",
+        "description": "",
         "cover": "https://user.oc-static.com/upload/2022/06/22/16559176658498_595_P9_DIW%20-%20Inte%CC%81grateur%20Front-End%20%281%29.jpg",
         "url": "https://devalexocr.github.io/AD_5_Nina_carducci_032023/",
         "languages": [
-            "JavaScript",
-            "Html",
-            "Css"
+            "../assets/logos/html5_logo.png",
+            "../assets/logos/css3_logo.png",
+            "../assets/logos/javascript_logo.png"    
         ] 
     },
     {
         "id": "4",
         "name": "Kasa",
-        "description": "Création d'une application web de location immobilière avec React",
+        "objectif": "Création d'une application web de location immobilière avec React",
+        "description": "",
         "cover": "https://user.oc-static.com/upload/2022/06/24/16560899769906_FR_811_P8_Banner-Kasa%20%281%29.png",
         "url": "https://devalexocr.github.io/AD_6_Kasa_042023/",
         "languages": [
-            "JavaScript",
-            "Sass",
-            "Html"
+            "../assets/logos/html5_logo.png",
+            "../assets/logos/javascript_logo.png",
+            "../assets/logos/sass_logo.png"  
         ] 
     },
     {
         "id": "5",
         "name": "Mon vieux Grimoire",
-        "description": "Développement du back-end d'un site de notation de livres",
+        "objectif": "Développement du back-end d'un site de notation de livres",
+        "description": "",
         "cover": "https://user.oc-static.com/upload/2022/10/11/16654934257102_DW-P7-Back-end_company-banner.png",
         "url": "",
         "languages": [
-            "JavaScript",
-            "Html",
-            "Css"
+            "../assets/logos/html5_logo.png",
+            "../assets/logos/css3_logo.png",
+            "../assets/logos/javascript_logo.png",
+            "../assets/logos/node_logo.png",
+            "../assets/logos/mongodb_logo.png"
+            
         ] 
     }
 ]

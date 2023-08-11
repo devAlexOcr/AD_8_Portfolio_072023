@@ -25,6 +25,7 @@ function Competence({open}) {
                         <li>React</li>
                         <li>Sass</li>
                         <li>Node</li>
+                        <li>ExpressJS</li>
                         <li>MongoDb</li>
                     </ul>
                 </div>

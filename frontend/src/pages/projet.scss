@@ -12,8 +12,9 @@
 }
 
 #info_projet {
-    display: flex;
-    
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap;
     width: 39vw;
 }
 
@@ -23,6 +24,6 @@
     width: 100vw;
 }
 .logo {
-    width: auto !important;
+    height: 25vh  !important;
     filter: drop-shadow(10px 10px 10px grey);
 }

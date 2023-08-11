@@ -8,6 +8,15 @@ import './projets.scss';
 function Projets({open, dataProjets}) {
 
   const PreviewRef = useRef();
+  const hoverEffect=() => {
+    PreviewRef.current.innerHTML = `<img id='img_preview' src=${dataProjets[0].cover} alt='preview du projet' />`
+  }
+
+  (Object.keys(dataProjets).length > 0) ?
+    hoverEffect()
+  :
+    <></>;
+ 
 
 
     return (
@@ -22,7 +31,7 @@ function Projets({open, dataProjets}) {
               {
               dataProjets.map(projet => (
                 
-                <li key={projet.id} ><Link to={/projet/ + projet.id}>{projet.name}</Link></li>
+                <li key={projet.id} onMouseOver={hoverEffect}><Link to={/projet/ + projet.id}>{projet.name}</Link></li>
               ))
               }
             </ul>
