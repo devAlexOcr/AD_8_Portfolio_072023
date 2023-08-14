@@ -3,10 +3,6 @@ import { useState, useEffect } from "react";
 
 import './projet.scss';
 
-// import Html from '../assets/images/logo/html5_logo.png';
-// import Css from '../assets/images/logo/css3_logo.png';
-// import JavaScript from '../assets/images/logo/javascript_logo.png'
-
 function Projet({}) {
 
     const [Projet, setProjet] = useState({});
@@ -37,7 +33,6 @@ function Projet({}) {
       })
     }, [Params.id, Navigate]);
 
-    console.log(Projet.languages)
     return (
         <section id="projet">
            <img id='cover_img' src={Projet.cover} alt={Projet.name} />
@@ -45,7 +40,7 @@ function Projet({}) {
                 {
                     (Object.keys(Projet).length > 0) ?
                     Projet.languages.map( techno => (
-                        <img className='logo' src={techno} alt={techno} />
+                        <img key={techno.index} className='logo' src={techno} alt={techno} />
                         )
                     )
                     :

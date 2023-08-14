@@ -5,6 +5,7 @@
         "objectif": "Création d'une page d'acceuil pour une agence de voyage",
         "description": "",
         "cover": "https://user.oc-static.com/upload/2022/06/20/16557256333819_FR_1155_P3_Banner-Booki.png",
+        "gitHub": "https://github.com/devAlexOcr/AD_2_booki_102022",
         "url": "https://devalexocr.github.io/AD_2_booki_102022/",
         "languages": [
             "../assets/logos/html5_logo.png",
@@ -17,7 +18,8 @@
         "objectif": "Création d'une page web dynamique",
         "description": "",
         "cover": "../assets/images/portfolio_sophie_bluel.png",
-        "url": "https://devalexocr.github.io/AD_3_PortFolio_SB_122022/",
+        "gitHub": "https://github.com/devAlexOcr/AD_3_PortFolio_SB_122022",
+        "url": "",
         "languages": [
             "../assets/logos/html5_logo.png",
             "../assets/logos/css3_logo.png",
@@ -30,6 +32,7 @@
         "objectif": "Débuggage et optimisation du site",
         "description": "",
         "cover": "https://user.oc-static.com/upload/2022/06/22/16559176658498_595_P9_DIW%20-%20Inte%CC%81grateur%20Front-End%20%281%29.jpg",
+        "gitHub": "https://github.com/devAlexOcr/AD_5_Nina_carducci_032023",
         "url": "https://devalexocr.github.io/AD_5_Nina_carducci_032023/",
         "languages": [
             "../assets/logos/html5_logo.png",
@@ -43,7 +46,8 @@
         "objectif": "Création d'une application web de location immobilière avec React",
         "description": "",
         "cover": "https://user.oc-static.com/upload/2022/06/24/16560899769906_FR_811_P8_Banner-Kasa%20%281%29.png",
-        "url": "https://devalexocr.github.io/AD_6_Kasa_042023/",
+        "gitHub": "https://github.com/devAlexOcr/AD_6_Kasa_042023",
+        "url": "",
         "languages": [
             "../assets/logos/html5_logo.png",
             "../assets/logos/javascript_logo.png",
@@ -56,6 +60,7 @@
         "objectif": "Développement du back-end d'un site de notation de livres",
         "description": "",
         "cover": "https://user.oc-static.com/upload/2022/10/11/16654934257102_DW-P7-Back-end_company-banner.png",
+        "gitHub": "https://github.com/devAlexOcr/AD_7_Mon_Vieux_Grimoire_062023",
         "url": "",
         "languages": [
             "../assets/logos/html5_logo.png",

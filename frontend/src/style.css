@@ -54,7 +54,7 @@
     animation-timing-function: cubic-bezier(0.14, 0.01, 0.01, 0.98);
   }
   to {
-    transform: translateX(-260px);
+    transform: translateX(-17vw);
   }
 }
 @keyframes opacityLogo {

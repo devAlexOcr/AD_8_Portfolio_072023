@@ -25,7 +25,7 @@ function Home({open}) {
       setProjets(data);
       
     })
-  }, [setProjets]);
+  }, []);
 
     return (
         <>

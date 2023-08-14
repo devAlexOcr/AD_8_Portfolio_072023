@@ -23,7 +23,6 @@ function Header({open, setOpen, main, setMain}) {
         logo2.current.classList.remove('animation_LogoText')
         entryRef.current.remove()
         accueil.current.style.flexDirection ='row'
-        // prevoir la redirection vers le path /home
         navRef.current.style.display ='flex'
     } 
 
