@@ -46,11 +46,33 @@ function Projet({}) {
                     :
                     <></>
                 }
-                {/* <img className='logo' src={Projet.} alt='logo Html 5' />
-                <img className='logo' src={Css} alt='logo Css 3'/>                 */}
             </div>
            <div id='projet_description'>
-            <p></p>
+            <p>{Projet.description}</p>
+            <h3>compétences</h3>
+            {
+                    (Object.keys(Projet).length > 0) ?
+                    Projet.competence.map( techno => (
+                        <li>{techno}</li>
+                        )
+                    )
+                    :
+                    <></>
+                }
+            <h3>Problématiques et solutions</h3>
+            {
+                    (Object.keys(Projet).length > 0) ?
+                        Projet.problematiques.map( prob => (
+                        <li>{prob}</li>
+                        ))
+                    :
+                    <></>
+                }
+                {
+                    Projet.solutions.map( sol => (
+                        <li>{sol}</li>
+                    ))
+                }
            </div>
         </section>
     )

@@ -19,9 +19,10 @@
 }
 
 #projet_description {
-    border: 1px solid black;
-    height: 50vh;
     width: 100vw;
+    p {
+        font-size: 1.6rem;
+    }
 }
 .logo {
     height: 25vh  !important;

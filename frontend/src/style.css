@@ -39,7 +39,7 @@
 
 .animation_LogoText {
   position: absolute;
-  left: 600px;
+  left: 39vw;
   height: 14vh;
   opacity: 0;
   animation-name: opacityLogo;

@@ -1,13 +1,13 @@
-import './competence.scss';
+import './technologies.scss';
 
 
 
 
-function Competence({open}) {
+function Technologies({open}) {
      
     return (
         <section  id="competence" className={(open)? "open_section" : "close_section"} >
-            <h2>Compétences</h2>
+            <h2>Technologies</h2>
             <div id='table'>
                 <div>
                     <h3>&#123; Languages &#125;</h3>
@@ -15,13 +15,13 @@ function Competence({open}) {
                         <li>Html</li>
                         <li>Css</li>
                         <li>JavaScript</li>
-
                     </ul>
                 </div>
                 <div>
                     <h3>&#123; Outils &#125;</h3>
-                    <ul>
+                    <ul id='outils'>
                         <li>Visual Studio Code</li>
+                        <li>GitHub</li>
                         <li>React</li>
                         <li>Sass</li>
                         <li>Node</li>
@@ -29,16 +29,9 @@ function Competence({open}) {
                         <li>MongoDb</li>
                     </ul>
                 </div>
-                {/* <div>
-                    <h3>&#123; Hobbies &#125;</h3>
-                    <ul>
-                        <li>Running</li>
-                        <li>Natation</li>
-                    </ul>
-                </div> */}
             </div>
         </section>
     )
 }
 
-export default Competence;
+export default Technologies;

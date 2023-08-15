@@ -13,9 +13,9 @@
 
 #preview_projet {
     width: 45vw;
-    height: 40vh;
     #img_preview {
         width: 45vw;
+        height: 40vh;
         box-shadow: 10px 10px 15px grey;
         border-radius: 20px;
     }
@@ -63,5 +63,19 @@
 }
 
 .logo_pro{
+    a:hover {
+        transform: scaleX(1.5);
+    }
     width: 7vw;
+    filter: drop-shadow(10px 10px 10px lightgrey);
+}
+
+#container_preview{
+    a{
+        img {
+            object-fit: contain;
+            height: 10vh;
+            margin: 1.5vw 0;
+        }
+    }
 }

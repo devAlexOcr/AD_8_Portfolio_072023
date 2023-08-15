@@ -11,20 +11,20 @@ import Www from '../../assets/images/logo/www_logo.png'
 function Projets({open, dataProjets}) {
 
   const PreviewRef = useRef();
+  const containerRef = useRef();
+
   const hoverEffect=(projet) => {
-    
     PreviewRef.current.innerHTML = `<div id='container_preview'>
                                       <img id='img_preview' src=${projet.cover} alt='preview du projet' />
-                                      <a href=${projet.gitHub}>
+                                      <div id='container_logo'>                                      <a href=${projet.gitHub}>
                                       <img  class='logo_pro' src=${GitHub} alt='logo gitHub'/>
                                       </a>
                                       <a href=${projet.url}>
-                                      <img  class='logo_pro' src=${Www} alt='logo site web'/>
-                                      </a>
+                                        <img  class='logo_pro' src=${Www} alt='logo site web'/>
+                                      </a> 
+                                      </div>
                                     </div>`
   }
-
-
 
     return (
       
@@ -48,4 +48,3 @@ function Projets({open, dataProjets}) {
     )
   };
   export default Projets;
-    

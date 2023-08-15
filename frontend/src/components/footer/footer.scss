@@ -1,9 +1,14 @@
 footer {
-    display: none;
+    display: flex;
+    font-family: AudioWide;
     flex-direction: column;
     align-items: center;
     background: black;
     color: white;
     position: relative;
-    bottom: 0;
+    top: 20vh;
+    margin: 50px 0;
+    p{
+        margin: 2vh;
+    }
 }

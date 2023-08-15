@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 import Presentation from '../components/home/presentation.jsx';
-import Competence from '../components/home/competence.jsx';
+import Technologies from '../components/home/technologies.jsx';
 import Projets from '../components/home/projets.jsx';
 
 
@@ -30,7 +30,7 @@ function Home({open}) {
     return (
         <>
             <Presentation open={open} />
-            <Competence open={open} />
+            <Technologies open={open} />
             <Projets open={open} dataProjets={dataProjets} />
         </>    
     )
