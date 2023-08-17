@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './projets.scss';
@@ -11,9 +10,12 @@ import Www from '../../assets/images/logo/www_logo.png'
 function Projets({open, dataProjets}) {
 
   const PreviewRef = useRef();
-  const containerRef = useRef();
+  const Openclassrooms = useRef();
+  const container = useRef();
+
 
   const hoverEffect=(projet) => {
+
     PreviewRef.current.innerHTML = `<div id='container_preview'>
                                       <img id='img_preview' src=${projet.cover} alt='preview du projet' />
                                       <div id='container_logo'>                                      <a href=${projet.gitHub}>
@@ -25,12 +27,24 @@ function Projets({open, dataProjets}) {
                                       </div>
                                     </div>`
   }
+  const ViewProjet=() => {
+    Openclassrooms.current.style.display ='none';
+    container.current.style.display ='flex';
+  }
+
+  const ViewFormation=() => {
+    Openclassrooms.current.style.display ='flex';
+    container.current.style.display ='none';
+  }
 
     return (
       
     <section id='projets' className={(open)? "open_section" : "close_section"} >
-      <h2>Projets</h2>
-        <div id='container'>
+      <button id='Btn_projets' onClick={()=>ViewFormation()}><h2>Projets</h2></button>
+        <div id='formation' ref={Openclassrooms}>
+          <button onClick={() =>ViewProjet()}></button>
+        </div>
+        <div id='container' ref={container}>
           <div id='preview_projet' ref={PreviewRef}>
           </div>
           <div id='titre_projet'>

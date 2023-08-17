@@ -5,10 +5,10 @@
     src: url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
   }
 
-#competence {
+#technologie {
     flex-direction: column;
     height: 85vh;
-    background-image: url('../../assets/images/17973903.jpg');
+    background-image: url('../../assets/images/17973903.webp');
     background-position: center;
     background-size: cover;
     color: white;
@@ -16,11 +16,56 @@
     h2 {
         text-align: center;
     }
+    img {
+        width: 10vw;
+        position: relative;
+        filter: drop-shadow(2px 1px 0px rgb(91, 91, 91));  
+    }
+}
+
+#logo_techno{
+    position: absolute;
+    opacity: 0.6;
+}
+
+#logo_HTML {
+    top: 2vh;
+    left: 5vw;
+}
+#logo_CSS{
+    top: 20vh;
+    left: 15vw;
+}
+#logo_JavaScript{
+    width: 8vw !important;
+    top: 50vh;
+    right: 10vw;
+}
+#logo_React{
+    top: 10vh;
+    left: 55vw;
+}
+#logo_Sass{
+top: 40vh;
+left: 40vw;
+}
+#logo_GitHub{
+    top: 55vh;
+    right: 10vw;
+}
+#logo_MongoDB{
+    top: 25vh;
+    right: 15vw;
+}
+#logo_Node{
+    top: 50vh;
+    right: 10vw;    
 }
 
 #table {
     display: flex;
     justify-content: space-around;
+    z-index: 2;
     h3 {
         text-align: center;
         color: #ffc72c;
@@ -28,7 +73,7 @@
     }
     ul {
         list-style: none;
-        font-size: 2rem;
+        font-size: 2vw;
         font-weight: 500;
         padding: 0;
         text-align: center;

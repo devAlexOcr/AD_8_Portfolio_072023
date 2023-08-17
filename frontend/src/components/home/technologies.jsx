@@ -1,12 +1,42 @@
+import { useEffect, useState } from 'react';
 import './technologies.scss';
 
 
 
 
 function Technologies({open}) {
-     
+
+    const [Logos, setLogos] = useState([]);
+    useEffect(() => {
+    
+        fetch('../datas/logos.json'
+        ,{
+            headers : { 
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            }
+        })
+        .then(function(res){          
+            return res.json();
+        })
+        .then(function(res) {       
+              setLogos(res)
+        })
+
+      }, [setLogos]);
     return (
-        <section  id="competence" className={(open)? "open_section" : "close_section"} >
+        <section  id="technologie" className={(open)? "open_section" : "close_section"} >
+            <div id="logo_techno">
+             {
+                    (Object.keys(Logos).length > 0) ?
+                    Logos.map( logo => (
+                        <img loading='lazy' key={logo.id} id={'logo_'+logo.name} src={logo.src} alt={logo.name} />
+                        )
+                    )
+                    :
+                    <></>
+                }
+            </div>
             <h2>Technologies</h2>
             <div id='table'>
                 <div>

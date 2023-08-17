@@ -19,7 +19,7 @@ function App() {
 
 
    const [open, setOpen] = useState(false)
-   const [main, setMain] = useState(false)
+   const [main, setMain] = useState(true)
    
 
 
@@ -32,7 +32,7 @@ function App() {
                     <Route path='/projet/:id' element={<Projet />} />
                     <Route path='/contact' element={<Contact />} />
                     <Route path='/login' element={<Login />} />
-                    <Route path='*' element={<Error />} />
+                    <Route path='*' element={<Error setOpen={setOpen} />} />
                 </Routes>
             </main>
             <Footer />

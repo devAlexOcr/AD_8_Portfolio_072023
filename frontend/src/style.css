@@ -88,7 +88,7 @@
   opacity: 0;
   text-decoration: none;
   margin: auto;
-  font-size: 2rem;
+  font-size: 2vw;
   color: #C69C2D;
   cursor: pointer;
   text-shadow: #C69C2D 0px 0px 20px;
@@ -123,12 +123,12 @@ main {
 h2 {
   font-family: AudioWide;
   font-weight: 800;
-  font-size: 4rem;
+  font-size: 4vw;
 }
 
 h3 {
   font-family: AudioWide !important;
-  font-size: 1.5rem;
+  font-size: 1.5vw;
   font-weight: 800;
 }
 
