@@ -1,0 +1,15 @@
+#login  {
+    height: 82vh;
+    & h2{
+        text-align: center;
+    }
+    #form_login{
+        height: 75vh;
+        flex-direction: column;
+        width: 80vw;
+        margin: auto;
+        align-items: center;
+        justify-content: flex-start;
+    }
+}
+

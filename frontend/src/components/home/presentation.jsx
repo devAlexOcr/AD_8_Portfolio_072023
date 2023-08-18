@@ -6,6 +6,7 @@ function Presentation({open}) {
      
     return (
         <section  id="description" className={(open)? "open" : "close"} >
+            
             <div id="portrait"></div>
             <p>
                 Après 10 ans de carrière dans les laboratoires d'analyses médicales,

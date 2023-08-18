@@ -31,12 +31,14 @@ function Home({open}) {
   const presentation=()=>{
 
   }
+  
   const technologies=()=>{
 
-    }
+  }
+
   const projet=()=>{
-  
-      }
+
+  }
 
     return (
         <>
