@@ -6,6 +6,7 @@
   }
 
 #technologie {
+    display: flex;
     flex-direction: column;
     height: 85vh;
     background-image: url('../../assets/images/17973903.webp');
@@ -54,7 +55,7 @@ left: 40vw;
     right: 10vw;
 }
 #logo_MongoDB{
-    top: 25vh;
+    top: 15vh;
     right: 15vw;
 }
 #logo_Node{

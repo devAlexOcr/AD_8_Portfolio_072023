@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 import Presentation from '../components/home/presentation.jsx';
 import Technologies from '../components/home/technologies.jsx';
@@ -7,10 +7,11 @@ import Projets from '../components/home/projets.jsx';
 
 function Home({open}) {
 
+    const centrale = useRef();
+
     const [dataProjets, setProjets] = useState([]);
   
   useEffect(() => {
-  
     fetch('datas/projets.json'
     ,{
         headers : { 
@@ -27,11 +28,30 @@ function Home({open}) {
     })
   }, []);
 
+  const presentation=()=>{
+
+  }
+  const technologies=()=>{
+
+    }
+  const projet=()=>{
+  
+      }
+
     return (
         <>
-            <Presentation open={open} />
-            <Technologies open={open} />
-            <Projets open={open} dataProjets={dataProjets} />
+        <nav id='nav_home'>
+          <button onClick={()=>presentation()}>Presentation</button>
+          <button onClick={()=>technologies()}>Technologies</button>
+          <button onClick={()=>projet()}>Projets</button>
+        </nav>
+        <section ref={centrale}>
+        <Presentation  open={open} />
+        <Technologies  open={open} />
+        <Projets open={open} dataProjets={dataProjets} />
+            
+            
+        </section>
         </>    
     )
 };

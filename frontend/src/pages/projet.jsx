@@ -37,6 +37,7 @@ function Projet({}) {
         <section id="projet">
            <img id='cover_img' src={Projet.cover} alt={Projet.name} />
             <div id='info_projet'>
+                
                 {
                     (Object.keys(Projet).length > 0) ?
                     Projet.languages.map( techno => (
@@ -60,7 +61,8 @@ function Projet({}) {
                     <></>
                 }
             <h3>Problématiques et solutions</h3>
-            {
+       
+            {/* {
                     (Object.keys(Projet).length > 0) ?
                         Projet.problematiques.map( prob => (
                         <li>{prob}</li>
@@ -72,7 +74,7 @@ function Projet({}) {
                     Projet.solutions.map( sol => (
                         <li>{sol}</li>
                     ))
-                }
+                } */}
            </div>
         </section>
     )

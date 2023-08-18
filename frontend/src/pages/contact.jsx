@@ -8,7 +8,7 @@ function Contact() {
 			<h3>Une question ? Une demande de devis ?</h3>
 			<p> N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24 heures</p>
 			<form method="post">
-				<div>
+				<div id='form1'>
 				<label for="nom">Nom</label>
 				<input type="text" name="nom" id="nom"/>
 				<label for="prénom">Prénom</label>
@@ -16,7 +16,7 @@ function Contact() {
 				<label for="email">Email</label>
 				<input type="email" name="email" id="email"/>
 				</div>
-				<div>
+				<div id='form2'>
 				<label for="message">Message</label>
 				<textarea name="message" id="message" cols="30" rows="10"></textarea>
 				<button type="submit">Envoyer</button>

@@ -100,6 +100,25 @@
   animation-iteration-count: infinite;
 }
 
+#nav_home {
+  width: 90vw;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
+}
+#nav_home button {
+  font-size: 2vw;
+  font-family: "Audiowide";
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+#nav_home button:hover {
+  text-decoration: underline;
+  text-decoration-color: #C69C2D;
+}
+
 @font-face {
   font-family: AudioWide;
   src: url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
