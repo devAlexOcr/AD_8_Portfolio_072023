@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 
 import Presentation from '../components/home/presentation.jsx';
 import Technologies from '../components/home/technologies.jsx';
@@ -6,8 +6,6 @@ import Projets from '../components/home/projets.jsx';
 
 
 function Home({open}) {
-
-    const centrale = useRef();
 
     const [dataProjets, setProjets] = useState([]);
   
@@ -28,31 +26,25 @@ function Home({open}) {
     })
   }, []);
 
-  const presentation=()=>{
-
-  }
-  
-  const technologies=()=>{
-
-  }
-
-  const projet=()=>{
-
-  }
+  const [displaySection, setDisplaySection] = useState(1);
 
     return (
         <>
         <nav id='nav_home'>
-          <button onClick={()=>presentation()}>Presentation</button>
-          <button onClick={()=>technologies()}>Technologies</button>
-          <button onClick={()=>projet()}>Projets</button>
+          <button onClick={()=>setDisplaySection(1)}>Presentation</button>
+          <button onClick={()=>setDisplaySection(2)}>Technologies</button>
+          <button onClick={()=>setDisplaySection(3)}>Projets</button>
         </nav>
-        <section ref={centrale}>
-        <Presentation  open={open} />
-        <Technologies  open={open} />
-        <Projets open={open} dataProjets={dataProjets} />
-            
-            
+        <section>
+          {
+            displaySection === 1 && <Presentation  open={open} />
+          }
+                    {
+            displaySection === 2 && <Technologies  open={open} />
+          }
+                    {
+            displaySection === 3 && <Projets open={open} dataProjets={dataProjets} />
+          }          
         </section>
         </>    
     )

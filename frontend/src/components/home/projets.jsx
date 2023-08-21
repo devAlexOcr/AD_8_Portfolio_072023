@@ -15,17 +15,29 @@ function Projets({open, dataProjets}) {
 
 
   const hoverEffect=(projet) => {
-    PreviewRef.current.innerHTML = `<div id='container_preview'>
-                                      <img id='img_preview' src=${projet.cover} alt='preview du projet' />
-                                      <div id='container_logo'>                                      
-                                        <a href=${projet.gitHub}>
-                                          <img  class='logo_pro' src=${GitHub} alt='logo gitHub'/>
-                                        </a>
-                                        <a href=${projet.url}>
-                                          <img  class='logo_pro' src=${Www} alt='logo site web'/>
-                                        </a> 
-                                      </div>
-                                    </div>`
+    if(projet.url) {
+      PreviewRef.current.innerHTML = `<div id='container_preview'>
+      <img id='img_preview' src=${projet.cover} alt='preview du projet' />
+      <div id='container_logo'>                                      
+        <a href=${projet.gitHub}>
+          <img  class='logo_pro' src=${GitHub} alt='logo gitHub'/>
+        </a>
+        <a href=${projet.url}>
+          <img  class='logo_pro' src=${Www} alt='logo site web'/>
+        </a> 
+      </div>
+    </div>`
+    }else{
+      PreviewRef.current.innerHTML = `<div id='container_preview'>
+      <img id='img_preview' src=${projet.cover} alt='preview du projet' />
+      <div id='container_logo'>                                      
+        <a href=${projet.gitHub}>
+          <img  class='logo_pro' src=${GitHub} alt='logo gitHub'/>
+        </a>
+      </div>
+    </div>`
+    }
+
   }
 
   const ViewProjet=() => {
