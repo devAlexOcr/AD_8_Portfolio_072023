@@ -32,14 +32,16 @@
 }
 
 #portrait {
-    width: 27vw;
-    height: 27vw;
-    background: #6495ed;
-    opacity: 0.5;
+    width: 24vw;
+    height: 32vw;
+    background: url('../../assets/images/profil.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     position: relative;
     top: 6vh;
     left: 1vw;
-    border-radius: 250px;
+    border-radius: 145px;
     box-shadow: 5px 5px 20px 4px;
 }
 

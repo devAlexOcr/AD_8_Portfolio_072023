@@ -20,6 +20,7 @@
             "Utilisation des valeurs en pourcentages"
         ],
         "gitHub": "https://github.com/devAlexOcr/AD_2_booki_102022",
+        "url": "https://devalexocr.github.io/AD_2_booki_102022/",
         "languages": [
             "../assets/logos/html5_logo.png",
             "../assets/logos/css3_logo.png"
@@ -31,7 +32,7 @@
         "objectif": "Création d'une page web dynamique",
         "description": "Ce projet représente une simulation du travail d'un developpeur Frontend au sein d'une équipe en charge de la réalisation du site portfolio d'une architecte d'interieur",
         "cover": "../assets/images/portfolio_sophie_bluel.png",
-        "competences": [
+        "competence": [
             "Récupérer les données utilisateurs dans le JavaScript vie des formulaires",
             "Manipuler les éléments du DOM avec JavaScrip",
             "Gérer les événements utilisateurs avec JavaScript"
@@ -48,7 +49,7 @@
         "languages": [
             "../assets/logos/html5_logo.png",
             "../assets/logos/css3_logo.png",
-            "../assets/logos/javascript_logo.png"
+            "../assets/logos/javascript_logo.png"  
         ] 
     },
     {

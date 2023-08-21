@@ -31,10 +31,7 @@ function Technologies({open}) {
             <div id="logo_techno">
              {
                     (Object.keys(Logos).length > 0) ?
-                    Logos.map( logo => (
-                        <img loading='lazy' key={logo.id} id={'logo_'+logo.name} src={logo.src} alt={logo.name} />
-                        )
-                    )
+                    Logos.map( logo => (<img  key={logo.id} id={'logo_'+logo.name} src={logo.src} alt={logo.name}/>))
                     :
                     <></>
                 }

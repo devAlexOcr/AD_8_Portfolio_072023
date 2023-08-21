@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 import './projet.scss';
 
-function Projet({}) {
+function Projet() {
 
     const [Projet, setProjet] = useState({});
     const Params = useParams();
@@ -32,9 +32,10 @@ function Projet({}) {
         
       })
     }, [Params.id, Navigate]);
-
+    console.log(Projet)
     return (
         <section id="projet">
+            <div id='img_projet'>
            <img id='cover_img' src={Projet.cover} alt={Projet.name} />
             <div id='info_projet'>
                 
@@ -42,39 +43,37 @@ function Projet({}) {
                     (Object.keys(Projet).length > 0) ?
                     Projet.languages.map( techno => (
                         <img key={techno.index} className='logo' src={techno} alt={techno} />
-                        )
-                    )
-                    :
-                    <></>
-                }
-            </div>
-           <div id='projet_description'>
-            <p>{Projet.description}</p>
-            <h3>compétences</h3>
-            {
-                    (Object.keys(Projet).length > 0) ?
-                    Projet.competence.map( techno => (
-                        <li>{techno}</li>
-                        )
-                    )
-                    :
-                    <></>
-                }
-            <h3>Problématiques et solutions</h3>
-       
-            {/* {
-                    (Object.keys(Projet).length > 0) ?
-                        Projet.problematiques.map( prob => (
-                        <li>{prob}</li>
                         ))
                     :
                     <></>
                 }
-                {
-                    Projet.solutions.map( sol => (
-                        <li>{sol}</li>
-                    ))
-                } */}
+            </div>
+            </div>
+            <div id='projet_description'>
+                <p>{Projet.description}</p>
+                    <h3>compétences</h3>
+            {   
+                (Object.keys(Projet).length > 0) ?
+                Projet.competence.map( techno => (<li>{techno}</li>))
+                :
+                <></>
+            }           
+           
+            <h3>Problématiques et solutions</h3>
+       
+            {
+                (Object.keys(Projet).length > 0) ?
+                    Projet.problematiques.map( prob => (<li>{prob}</li>))
+                :
+                <></>
+            }
+            {
+                (Object.keys(Projet).length > 0) ?
+                    Projet.solutions.map( sol => (<li>{sol}</li>))
+                :
+                <></>   
+            }       
+                
            </div>
         </section>
     )

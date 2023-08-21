@@ -20,11 +20,17 @@
 
 #projet_description {
     width: 100vw;
+    margin-bottom: 5vh;
     p {
         font-size: 1.6vw;
     }
 }
 .logo {
-    height: 25vh  !important;
+    height: 25vh !important;
     filter: drop-shadow(10px 10px 10px grey);
+}
+
+#img_projet{
+    display: flex;
+    margin-top: 5vh;
 }
