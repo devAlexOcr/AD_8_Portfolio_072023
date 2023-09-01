@@ -1,6 +1,8 @@
 #contact{
     text-align: center;
     height: 86vh;
+    p {font-size: 2vw;}
+    h3 {font-size: 4vw;}
 }
 
 form {
@@ -19,7 +21,7 @@ form {
     label{
         text-align: left;
         font-weight: 600;
-        font-size: 1.5vw;
+        font-size: 2vw;
         margin: 1vw;
     }
     input {
@@ -32,7 +34,7 @@ form {
     }
     #message {
         width: 40vw;
-        height: 30vh;
+        height: 17vw;
         margin: 1vw;
         border: none;
         border-radius: 10px;
@@ -61,4 +63,13 @@ form {
     
 }
 
+@media all and (max-width: 1024px) {
+    form {
+        display: block;
+        #form1, #form2 {
+            width: 80vw;
+              #message {width: 80vw;}
+        }
+    }
+}
 

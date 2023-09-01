@@ -10,7 +10,7 @@
 
 .header {
   z-index: 3;
-  height: 15vh !important;
+  height: 6vw !important;
   transition: height 600ms;
 }
 .header #logo1 {
@@ -21,7 +21,6 @@
 }
 .header #accueil {
   width: 95vw;
-  height: 15vh;
   justify-content: space-between;
 }
 
@@ -106,6 +105,8 @@
   display: flex;
   justify-content: center;
   gap: 2vw;
+  position: relative;
+  z-index: 2;
 }
 #nav_home button {
   font-size: 2vw;
@@ -136,7 +137,7 @@ code {
 
 main {
   position: relative;
-  top: 15vh;
+  top: 6vw;
 }
 
 h2 {

@@ -10,7 +10,7 @@
 
 .header {
     z-index: 3;
-    height: 15vh !important;
+    height: 6vw !important;
     transition: height 600ms;
     #logo1 {
         width: 7vw !important;
@@ -20,7 +20,6 @@
     }
     #accueil{
         width: 95vw;
-        height: 15vh;
         justify-content: space-between;
     }
 }
@@ -103,6 +102,8 @@
    display: flex;
    justify-content: center;
    gap: 2vw;
+   position: relative;
+   z-index: 2;
    button {
     font-size: 2vw;
     font-family: 'Audiowide';

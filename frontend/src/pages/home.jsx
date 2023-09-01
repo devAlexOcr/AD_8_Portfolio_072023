@@ -8,6 +8,7 @@ import Projets from '../components/home/projets.jsx';
 function Home({open}) {
 
     const [dataProjets, setProjets] = useState([]);
+    const [displaySection, setDisplaySection] = useState(1);
   
   useEffect(() => {
     fetch('datas/projets.json'
@@ -26,7 +27,7 @@ function Home({open}) {
     })
   }, []);
 
-  const [displaySection, setDisplaySection] = useState(1);
+  
 
     return (
         <>

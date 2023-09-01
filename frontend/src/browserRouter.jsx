@@ -19,7 +19,7 @@ function App() {
 
 
    const [open, setOpen] = useState(false)
-   const [main, setMain] = useState(true)
+   const [main, setMain] = useState(false)
    
 
 

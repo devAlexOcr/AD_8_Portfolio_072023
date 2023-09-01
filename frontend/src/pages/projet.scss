@@ -21,16 +21,36 @@
 #projet_description {
     width: 100vw;
     margin-bottom: 5vh;
+    h3 {
+        font-size: 3vw;
+    }
     p {
-        font-size: 1.6vw;
+        font-size: 1.5vw;
+    }
+    li {
+        font-size: 1.5vw;
     }
 }
 .logo {
-    height: 25vh !important;
+    height: 10vw !important;
     filter: drop-shadow(10px 10px 10px grey);
 }
 
 #img_projet{
     display: flex;
     margin-top: 5vh;
+}
+
+@media all and (max-width: 768px) {
+    #img_projet{
+        width: 100vw;
+        flex-direction: column;
+        gap: 7vw;
+        #cover_img {
+            width: 90vw;
+        }
+        #info_projet{
+           width: 90vw;
+        }
+    }
 }

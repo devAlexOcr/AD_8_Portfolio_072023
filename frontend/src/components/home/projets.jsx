@@ -64,7 +64,7 @@ function Projets({open, dataProjets}) {
             <ul id='name_projet'>
               {
               dataProjets.map(projet => (
-                <li key={projet.id} onMouseOver={()=> hoverEffect(projet)} ><Link to={/projet/ + projet.id}>{projet.name}</Link></li>
+                <li key={projet.id} onMouseOver={()=>setInterval(hoverEffect(projet), 3000) } ><Link to={/projet/ + projet.id}>{projet.name}</Link></li>
               ))
               }
             </ul>
