@@ -2,7 +2,7 @@
   background: radial-gradient(circle, rgb(3, 30, 54) 0%, rgb(0, 0, 0) 100%);
   width: 100vw;
   height: 100vh;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   transition: height 600ms;
@@ -39,7 +39,6 @@
 .animation_LogoText {
   position: absolute;
   left: 39vw;
-  height: 14vh;
   opacity: 0;
   animation-name: opacityLogo;
   animation-duration: 2500ms;
@@ -120,6 +119,11 @@
   text-decoration-color: #C69C2D;
 }
 
+@media all and (max-width: 768px) {
+  .header {
+    height: 25vw !important;
+  }
+}
 @font-face {
   font-family: AudioWide;
   src: url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
@@ -150,6 +154,12 @@ h3 {
   font-family: AudioWide !important;
   font-size: 1.5vw;
   font-weight: 800;
+}
+
+@media all and (max-width: 768px) {
+  main {
+    top: 26vw;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

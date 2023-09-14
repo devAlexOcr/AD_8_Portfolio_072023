@@ -7,7 +7,6 @@ import Contact from '../src/pages/contact.jsx';
 import Login from '../src/pages/login.jsx';
 import Error from '../src/pages/error.jsx';
 
-
 import Header from '../src/components/header/index.jsx';
 import Footer from '../src/components/footer/footer.jsx';
 
@@ -26,7 +25,11 @@ function App() {
     return (
         <BrowserRouter>
             <Header open={open} setOpen={setOpen} main={main} setMain={setMain} />
-            <main className={main? 'open_main' : 'close_main'} >
+            <main 
+            // className={main? 'open_main' : 'close_main'} 
+            className='open_main'
+            >
+
                 <Routes>
                     <Route path='/' element={<Home open={open} />} />
                     <Route path='/projet/:id' element={<Projet />} />

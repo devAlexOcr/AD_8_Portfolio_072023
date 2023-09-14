@@ -1,5 +1,5 @@
 import './contact.scss'
-import './submit_contact.php'
+
 function Contact() {
 
     return (        
@@ -7,7 +7,7 @@ function Contact() {
         <section id="contact">           
 			<h3>Une question ? Une demande de devis ?</h3>
 			<p> N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24 heures</p>
-			<form action="submit_contact.php" method="POST">
+			<form>
 				<div id='form1'>
 				<label for="nom">Nom</label>
 				<input type="text" name="nom" id="nom"/>

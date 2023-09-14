@@ -33,3 +33,9 @@ header {
 .open_main {
     display: block
 }
+
+@media all and (max-width: 768px) {
+    #nav_header {
+        font-size: 2vw;
+    }
+}

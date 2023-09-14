@@ -2,7 +2,7 @@
     background: radial-gradient(circle, rgba(3,30,54,1) 0%, rgba(0,0,0,1) 100%);
     width: 100vw;
     height: 100vh;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     transition: height 600ms;
@@ -36,7 +36,6 @@
 .animation_LogoText{
     position: absolute;
     left: 39vw;
-    height: 14vh;
     opacity: 0;
     animation-name: opacityLogo;
     animation-duration: 2500ms;
@@ -115,4 +114,11 @@
         text-decoration-color: #C69C2D;
     }
    }
+}
+
+@media all and (max-width: 768px) {
+    .header{
+        height: 25vw !important;
+    }
+
 }

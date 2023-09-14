@@ -16,7 +16,7 @@ function Header({open, setOpen, main, setMain}) {
     const logo1 = useRef();
     const logo2 = useRef();
 
-    const [header, setHeader] = useState(false);
+    const [header, setHeader] = useState(sessionStorage.getItem('header'));
 
     if (header === true) {
         homeRef.current.classList.add('header');
