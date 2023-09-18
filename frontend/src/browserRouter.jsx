@@ -6,6 +6,7 @@ import Projet from '../src/pages/projet.jsx';
 import Contact from '../src/pages/contact.jsx';
 import Login from '../src/pages/login.jsx';
 import Error from '../src/pages/error.jsx';
+import Avis from '../src/pages/avis.jsx';
 
 import Header from '../src/components/header/index.jsx';
 import Footer from '../src/components/footer/footer.jsx';
@@ -35,6 +36,7 @@ function App() {
                     <Route path='/projet/:id' element={<Projet />} />
                     <Route path='/contact' element={<Contact />} />
                     <Route path='/login' element={<Login />} />
+                    <Route path='/avis' element={<Avis />} />
                     <Route path='*' element={<Error setOpen={setOpen} />} />
                 </Routes>
             </main>

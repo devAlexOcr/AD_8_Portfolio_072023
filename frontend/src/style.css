@@ -124,6 +124,12 @@
     height: 25vw !important;
   }
 }
+#avis {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 @font-face {
   font-family: AudioWide;
   src: url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
