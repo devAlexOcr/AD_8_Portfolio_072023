@@ -11,16 +11,22 @@ function Login() {
     const password = useRef();
     const name = useRef();
     const firstname = useRef();
-   
-        function clickLogin(action) {
 
-                const user = {
-                    action: action,
+    function User(action) { 
+        if(action === 'signup') {                
+            return {action: action,
                     email: email.current.value,
                     password: password.current.value,
                     name: name.current.value,
-                    firstname: firstname.current.value
-                }
+                    firstname: firstname.current.value}
+        } else {
+            return {action: action,
+                    email: email.current.value,
+                    password: password.current.value}
+        }};
+   
+        function clickLogin(action) {
+           const user = User(action)
 
             fetch('https://api.alexandrepaucdetoc.fr/login', 
                 {
