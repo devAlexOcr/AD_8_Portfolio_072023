@@ -3,7 +3,7 @@
     & h2{
         text-align: center;
     }
-    #form_login{
+    #form_signUp, #form_login{
         height: 75vh;
         flex-direction: column;
         width: 80vw;
@@ -11,5 +11,11 @@
         align-items: center;
         justify-content: flex-start;
     }
+}
+
+#nav_login{
+    display: flex;
+    justify-content: center;
+
 }
 
