@@ -7,11 +7,11 @@ function Stars({rating}) {
   
         return (      
   
-        <div id='Stars'>
+        <div className='Stars'>
   
         {
         starNumber.map((i, p) =>
-          <i key={p} className={(rating>i)?"fa-solid fa-star star-rating" : "fa-solid fa-star"}></i>
+          <i key={p} className={(rating>i-1)?"fa-solid fa-star star-rating" : "fa-solid fa-star"}></i>
           )
         }
   

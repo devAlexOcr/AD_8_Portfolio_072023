@@ -9,7 +9,7 @@
 }
 
 #stars_Form{
-    #Stars {
+    .Stars {
         top: 0!important;
         flex-direction: row-reverse;
         .fa-solid {
@@ -25,7 +25,13 @@
          .fa-solid:hover ~ .fa-solid, .fa-solid:focus ~ .fa-solid {
             color: orange;
         }
-    }
+    }  
+}
 
-    
+#displayAvis {
+    width: 90vw;
+    margin: 10vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }

@@ -1,19 +1,24 @@
 import Stars from './stars.jsx';
 import './comment.scss';
 
-function Comment (Comments) {
-  console.log(Comments);
+function Comment (commentaire) {
+
+ const dataCom = commentaire.commentaire
+console.log(dataCom)
+  const nameStr = (dataCom.name.substring(0,1)).toUpperCase();
+  console.log(nameStr)
     return (
       <>
-        <div id='comment'>
-          <div id='user'>
-            <p>alexandre D.</p>
+        <div className='comment'>
+          <div className='user'>
+            <p>{dataCom.firstname} {nameStr}.</p>
           </div>
-          <div id='text'>
-            <p> integration du commmentaire de maniere dynamique</p>
+          <div className='text'>
+            <p> {dataCom.content}</p>
           </div> 
+        
+        <Stars rating={dataCom.rating} />
         </div>
-        <Stars rating={3} />
       </>
     )
 };

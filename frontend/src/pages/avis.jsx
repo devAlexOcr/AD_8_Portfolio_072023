@@ -25,11 +25,20 @@ function GetAllComments () {
     })
 }
 
+
+
     return (
         <section id='avis'>
             <button type='button' onClick={()=>GetAllComments()}>Get All Comments</button>
             <h2>Ils en pensent quoi ?</h2>
-                <Comment comments={Comments} />
+                <div id='displayAvis'>
+                    {
+                        (Object.keys(Comments).length >0) ?
+                            Comments.map(commentaire => (<Comment key={commentaire.idComment} commentaire={commentaire} />))  
+                        :
+                            <></>  
+                    }
+                </div>
                 <FormAvis />
         </section>
  
