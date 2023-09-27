@@ -1,9 +1,8 @@
 import Stars from './stars.jsx';
 import './comment.scss';
 
-function Comment () {
-
-
+function Comment (Comments) {
+  console.log(Comments);
     return (
       <>
         <div id='comment'>
