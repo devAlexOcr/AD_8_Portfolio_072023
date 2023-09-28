@@ -18,7 +18,7 @@ function Avis () {
             }
         )
         .then (res => { return res.json(); })
-        .then (data => {setComments(data); })
+        .then (data => {setComments(data.slice(0,3)); })
     }, [])
 
 
