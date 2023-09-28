@@ -1,9 +1,9 @@
 import './stars.scss';
 
 
-function Stars({rating}) {
+function Stars({rating, setRating}) {
     
-    const starNumber = [1,2,3,4,5];
+    const starNumber = [5,4,3,2,1];
   
         return (      
   
@@ -11,7 +11,7 @@ function Stars({rating}) {
   
         {
         starNumber.map((i, p) =>
-          <i key={p} className={(rating>i-1)?"fa-solid fa-star star-rating" : "fa-solid fa-star"}></i>
+          <i key={p} onClick={()=>setRating(starNumber[p])} className={(rating > i-1) ? "fa-solid fa-star star-rating" : "fa-solid fa-star"}></i>
           )
         }
   

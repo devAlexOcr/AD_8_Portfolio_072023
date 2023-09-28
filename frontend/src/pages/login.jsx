@@ -37,16 +37,17 @@ function Login() {
                     body: JSON.stringify(user)
                 }
             )
-            
             .then (res => {
                 return res.json();
             })
             .then(data => {
-                return console.log(data);
-            })
-            
+               setCurrentUser(data);
+            })  
         };
-  
+
+    const [currentUser, setCurrentUser] = useState(['User non connecté']);
+
+    localStorage.setItem('CurrentUser', JSON.stringify(currentUser));
     
     return (
         <section id="login">
@@ -57,22 +58,22 @@ function Login() {
             </nav>
             {Form === 1 &&        
                 <form method='post' id='form_login'>
-                    <label for="email">Email</label>
+                    <label htmlFor="email">Email</label>
                         <input ref={email} type='email' name='email' id='login2'/>
-                    <label for='password'>Password</label>
+                    <label htmlFor='password'>Password</label>
                         <input ref={password} type="password" name='password' id='current-password'/>
                     <button  type ='button' onClick={()=>clickLogin('log')} id='se_connecter'>Se connecter</button>
                 </form>
             }
             {Form === 2 && 
                 <form method='post' id='form_signUp'>
-                    <label for='name'>Name</label>
+                    <label htmlFor='name'>Name</label>
                         <input ref={name} type='text' />
-                    <label for='firstname'>Firstname</label>
+                    <label htmlFor='firstname'>Firstname</label>
                         <input ref={firstname} type='text'/>
-                    <label for="email">Email</label>
+                    <label htmlFor="email">Email</label>
                         <input ref={email} type='email' name='email' id='login2'/>
-                    <label for='password'>Password</label>
+                    <label htmlFor='password'>Password</label>
                         <input ref={password} type="password" name='password' id='current-password'/>
                     <button type='button' onClick={()=>clickLogin('signup')} id='register'>S'enregistrer</button>
                 </form>

@@ -1,17 +1,25 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 
 import Stars from './stars.jsx';
 
 function FormAvis() {
 
 const commentText = useRef();
+const [ratingStar, setRating] = useState(0)
 
-    function publish() {
-        const comment ={
-            content : commentText.current.value
+const userStorage = JSON.parse(localStorage.getItem('CurrentUser'));
+  
+    function publish(action) {
+        const comment = {
+            action: action,
+            name: userStorage[0].name,
+            firstname: userStorage[0].firstname,
+            content : commentText.current.value,
+            rating: ratingStar
         }
+        console.log(comment);
 
-         fetch('https://api.alexandrepaucdetoc.fr/login', 
+         fetch('https://api.alexandrepaucdetoc.fr/avis', 
              {
                  method: 'POST',
                  headers: {
@@ -21,7 +29,7 @@ const commentText = useRef();
              }
          )
          .then (res => {
-            res.json();
+           return res.json();
          })
          .then(data => {
              return console.log(data);
@@ -35,10 +43,12 @@ const commentText = useRef();
             <label htmlFor="rate">
                 <p>Note</p>
                 <div id='stars_Form'>
-                    <Stars rating={1} />
-                </div>                
+                    <div className='Stars'>
+                        <Stars setRating={setRating} />
+                    </div> 
+                </div>               
             </label>
-            <button onClick={()=>publish()}>Publier</button>
+            <button type='button' onClick={()=>publish('publish')}>Publier</button>
         </form>
     )
 };

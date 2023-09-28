@@ -3,12 +3,10 @@ import './comment.scss';
 
 function Comment (commentaire) {
 
- const dataCom = commentaire.commentaire
-console.log(dataCom)
+  const dataCom = commentaire.commentaire
   const nameStr = (dataCom.name.substring(0,1)).toUpperCase();
-  console.log(nameStr)
+
     return (
-      <>
         <div className='comment'>
           <div className='user'>
             <p>{dataCom.firstname} {nameStr}.</p>
@@ -16,10 +14,8 @@ console.log(dataCom)
           <div className='text'>
             <p> {dataCom.content}</p>
           </div> 
-        
-        <Stars rating={dataCom.rating} />
+          <Stars rating={dataCom.rating} />
         </div>
-      </>
     )
 };
 

@@ -11,7 +11,7 @@
 #stars_Form{
     .Stars {
         top: 0!important;
-        flex-direction: row-reverse;
+        direction: rtl;
         .fa-solid {
             color: #aaa;
             text-decoration: none;
@@ -20,9 +20,10 @@
          .fa-solid:hover,
          .fa-solid:focus {
             color: orange;
-            // cursor: pointer;
+            cursor: pointer;
          }
-         .fa-solid:hover ~ .fa-solid, .fa-solid:focus ~ .fa-solid {
+         .fa-solid:hover ~ .fa-solid, 
+         .fa-solid:focus ~ .fa-solid {
             color: orange;
         }
     }  
