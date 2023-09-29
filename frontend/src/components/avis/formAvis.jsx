@@ -1,15 +1,22 @@
 import { useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 import Stars from './stars.jsx';
 
 function FormAvis() {
 
+const Navigate = useNavigate();
 const commentText = useRef();
 const [ratingStar, setRating] = useState(0)
 
 const userStorage = JSON.parse(localStorage.getItem('CurrentUser'));
   
     function publish(action) {
+        if (userStorage == null ) {
+            console.log('message user vide')
+            Navigate('/login')
+        }else{ 
         const comment = {
             action: action,
             name: userStorage[0].name,
@@ -33,7 +40,7 @@ const userStorage = JSON.parse(localStorage.getItem('CurrentUser'));
          })
          .then(data => {
              return console.log(data);
-         })
+         })}
      };
 
     return (
