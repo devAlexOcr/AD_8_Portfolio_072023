@@ -12,18 +12,12 @@
     .Stars {
         top: 0!important;
         direction: rtl;
-        .fa-solid {
-            color: #aaa;
-            text-decoration: none;
-            transition: color .4s;
-         }
          .fa-solid:hover,
          .fa-solid:focus {
             color: orange;
             cursor: pointer;
          }
-         .fa-solid:hover ~ .fa-solid, 
-         .fa-solid:focus ~ .fa-solid {
+         .fa-solid:hover ~ .fa-solid {
             color: orange;
         }
     }  

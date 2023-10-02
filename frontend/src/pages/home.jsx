@@ -5,8 +5,8 @@ import Technologies from '../components/home/technologies.jsx';
 import Projets from '../components/home/projets.jsx';
 
 
-function Home({open}) {
-
+function Home({setPage}) {
+    setPage('Home');
     const [dataProjets, setProjets] = useState([]);
     const [displaySection, setDisplaySection] = useState(1);
   
@@ -38,13 +38,13 @@ function Home({open}) {
         </nav>
         <section>
           {
-            displaySection === 1 && <Presentation  open={open} />
+            displaySection === 1 && <Presentation />
           }
                     {
-            displaySection === 2 && <Technologies  open={open} />
+            displaySection === 2 && <Technologies />
           }
                     {
-            displaySection === 3 && <Projets open={open} dataProjets={dataProjets} />
+            displaySection === 3 && <Projets dataProjets={dataProjets} />
           }          
         </section>
         </>    

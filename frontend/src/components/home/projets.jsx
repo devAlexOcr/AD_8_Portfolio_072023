@@ -7,7 +7,7 @@ import Www from '../../assets/images/logo/www_logo.png'
 
 
 
-function Projets({open, dataProjets}) {
+function Projets({dataProjets}) {
 
   const PreviewRef = useRef();
   const Openclassrooms = useRef();
@@ -52,7 +52,7 @@ function Projets({open, dataProjets}) {
 
     return (
       
-    <section id='projets' className={(open)? "open_section" : "close_section"} >
+    <section id='projets' className='open' >
       <button id='Btn_projets' onClick={()=>ViewFormation()}><h2>Projets</h2></button>
         <div id='formation' ref={Openclassrooms}>
           <button onClick={() =>ViewProjet()}></button>

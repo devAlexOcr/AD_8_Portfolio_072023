@@ -3,12 +3,11 @@ import { useState, useEffect } from 'react';
 import Comment from '../components/avis/comment.jsx';
 import FormAvis from '../components/avis/formAvis.jsx';
 
-import './avis.scss';
 
 function Avis () {
     const [Comments, setComments] = useState({});
 
-    useEffect(() => {   
+    const getComment = () => {
         fetch('https://api.alexandrepaucdetoc.fr/avis', 
             {
                 method: 'GET',
@@ -19,6 +18,10 @@ function Avis () {
         )
         .then (res => { return res.json(); })
         .then (data => {setComments(data.slice(0,3)); })
+    };
+
+    useEffect(() => {   
+        getComment();
     }, [])
 
 
@@ -36,7 +39,7 @@ function Avis () {
                             <></>  
                     }
                 </div>
-                <FormAvis />
+                <FormAvis getComment={getComment}/>
         </section>
  
     )

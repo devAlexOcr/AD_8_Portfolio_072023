@@ -1,15 +1,63 @@
 header {
     display: flex;
+    justify-content: space-around;
+    gap: 40vw;
     width: 100vw;
     position: fixed;
     top: 0;
     box-shadow: 0px 5px 20px 0px grey;
     z-index: 3;
+    background: radial-gradient(circle, rgba(3,30,54,1) 0%, rgba(0,0,0,1) 100%);
+    z-index: 3;
+    height: 6vw !important;
+    transition: height 600ms;
+    a {
+        display: flex;
+    }
+    #logo1 {
+        width: 7vw !important;
+    }
+    #logo2 {
+        width: 20vw !important;
+    }
+    #accueil{
+        width: 95vw;
+        justify-content: space-between;
+    }
+}
+
+
+#nav_home {
+    width: 90vw;
+    margin: auto;
+   display: flex;
+   justify-content: center;
+   gap: 2vw;
+   position: relative;
+   z-index: 2;
+   button {
+    font-size: 2vw;
+    font-family: 'Audiowide';
+    background:none;
+    border: none;
+    cursor: pointer;
+    &:hover {
+        text-decoration: underline;
+        text-decoration-color: #C69C2D;
+    }
+   }
+}
+
+@media all and (max-width: 768px) {
+    .header{
+        height: 25vw !important;
+    }
+
 }
 
 
 #nav_header {
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: right;
     font-size: 1.5vw;
@@ -24,14 +72,6 @@ header {
             transition: transform 600ms;
         }
     }
-}
-
-.close_main {
-    display: none;
-}
-
-.open_main {
-    display: block
 }
 
 @media all and (max-width: 768px) {

@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 import Stars from './stars.jsx';
 
-function FormAvis() {
+function FormAvis({getComment}) {
 
 const Navigate = useNavigate();
 const commentText = useRef();
@@ -39,6 +39,7 @@ const userStorage = JSON.parse(localStorage.getItem('CurrentUser'));
            return res.json();
          })
          .then(data => {
+            getComment();
              return console.log(data);
          })}
      };
@@ -50,8 +51,8 @@ const userStorage = JSON.parse(localStorage.getItem('CurrentUser'));
             <label htmlFor="rate">
                 <p>Note</p>
                 <div id='stars_Form'>
-                    <div className='Stars'>
-                        <Stars setRating={setRating} />
+                    <div className='Star'>
+                        <Stars rating={ratingStar} setRating={setRating} />
                     </div> 
                 </div>               
             </label>

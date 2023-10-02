@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 // pages
@@ -7,40 +8,39 @@ import Contact from '../src/pages/contact.jsx';
 import Login from '../src/pages/login.jsx';
 import Error from '../src/pages/error.jsx';
 import Avis from '../src/pages/avis.jsx';
+import Start from '../src/pages/start.jsx';
 
 import Header from '../src/components/header/index.jsx';
 import Footer from '../src/components/footer/footer.jsx';
 
-import { useState } from 'react';
+
 
 
 function App() {
 
-
-
-   const [open, setOpen] = useState(false)
-   const [main, setMain] = useState(false)
-   
-
+   const [Page, setPage] = useState('Start')
 
     return (
+       
         <BrowserRouter>
-            <Header open={open} setOpen={setOpen} main={main} setMain={setMain} />
-            <main 
-            // className={main? 'open_main' : 'close_main'} 
-            className='open_main'
-            >
-
+            {
+                Page !== 'Start' && <Header setPage={setPage} />
+            }
+            <main className={(Page !== 'Start')? 'main' : '' } >
                 <Routes>
-                    <Route path='/' element={<Home open={open} />} />
+                    <Route path='/' element={<Start  />} />
+                    <Route path='/home' element={<Home setPage={setPage} />} />
                     <Route path='/projet/:id' element={<Projet />} />
                     <Route path='/contact' element={<Contact />} />
                     <Route path='/login' element={<Login />} />
                     <Route path='/avis' element={<Avis />} />
-                    <Route path='*' element={<Error setOpen={setOpen} />} />
+                    <Route path='*' element={<Error />} />
                 </Routes>
             </main>
-            <Footer />
+            {
+                Page !== 'Start' && <Footer />
+            }
+            
         </BrowserRouter>
     )
 }

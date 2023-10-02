@@ -1,0 +1,82 @@
+#home {
+    background: radial-gradient(circle, rgba(3,30,54,1) 0%, rgba(0,0,0,1) 100%);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: height 600ms;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+}
+.animation_LogoImg{
+    animation-name: opacityLogo, translateX;
+    animation-duration: 2500ms, 2s;
+    animation-delay: 0s, 1300ms;
+    animation-fill-mode: forwards;
+}
+.animation_LogoText{
+    position: absolute;
+    left: 39vw;
+    opacity: 0;
+    animation-name: opacityLogo;
+    animation-duration: 2500ms;
+    animation-delay: 3500ms;
+    animation-fill-mode: forwards;
+}
+
+#accueil {
+    display: flex;
+    flex-direction: column;
+    #logo1 {
+        width: 15vw;
+    }
+    #logo2 {
+        width: 35vw;
+    }
+}
+
+#entry {
+    opacity: 0;
+    text-decoration: none;
+    margin: auto;
+    font-size: 2vw;
+    color: #C69C2D;
+    cursor: pointer;
+    text-shadow: #C69C2D 0px 0px 20px;
+    position: relative;
+    top: 15vh;
+    animation-name: opacityEntry;
+    animation-duration: 1300ms;
+    animation-delay: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes translateX{
+    from {
+        transform: translateX(0px);
+        animation-timing-function: cubic-bezier(0.14, 0.01, 0.01, 0.98);
+    }
+    to {
+        transform: translateX(-17vw);
+    }
+}
+@keyframes opacityLogo{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes opacityEntry{
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}

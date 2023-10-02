@@ -11,11 +11,7 @@
     transition: opacity 3s;
     transition-delay: 400ms;
 }
-.close{
-    height: 0;
-    top: 100vh;
-    transition: top 200ms;
-}
+
 #description {
     display: flex;
     justify-content: space-between;

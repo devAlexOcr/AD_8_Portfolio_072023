@@ -4,7 +4,7 @@ import './technologies.scss';
 
 
 
-function Technologies({open}) {
+function Technologies() {
 
 
 
@@ -27,7 +27,7 @@ function Technologies({open}) {
 
       }, [setLogos]);
     return (
-        <section id="technologie" className={(open)? "open_section" : "close_section"} >
+        <section id="technologie" className='open' >
             <div id="logo_techno">
              {
                     (Object.keys(Logos).length > 0) ?

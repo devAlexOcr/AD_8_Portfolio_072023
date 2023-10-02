@@ -2,10 +2,10 @@ import './presentation.scss';
 
 
 
-function Presentation({open}) {
+function Presentation({}) {
      
     return (
-        <section  id="description" className={(open)? "open" : "close"} >
+        <section  id="description" className='open' >
             
             <div id="portrait"></div>
             <p>
