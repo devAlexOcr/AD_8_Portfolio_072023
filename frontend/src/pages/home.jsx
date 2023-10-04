@@ -9,6 +9,7 @@ function Home({setPage}) {
     setPage('Home');
     const [dataProjets, setProjets] = useState([]);
     const [displaySection, setDisplaySection] = useState(1);
+    console.log(displaySection)
   
   useEffect(() => {
     fetch('datas/projets.json'
@@ -32,21 +33,21 @@ function Home({setPage}) {
     return (
         <>
         <nav id='nav_home'>
-          <button onClick={()=>setDisplaySection(1)}>Presentation</button>
-          <button onClick={()=>setDisplaySection(2)}>Technologies</button>
-          <button onClick={()=>setDisplaySection(3)}>Projets</button>
+          <button onClick={()=>setDisplaySection(1)} className={(displaySection === 1)? 'active' : ''} > Presentation </button>
+          <button onClick={()=>setDisplaySection(2)} className={(displaySection === 2)? 'active' : ''} > Technologies </button>
+          <button onClick={()=>setDisplaySection(3)} className={(displaySection === 3)? 'active' : ''} > Projets </button>
         </nav>
-        <section>
+        
           {
             displaySection === 1 && <Presentation />
           }
-                    {
+          {
             displaySection === 2 && <Technologies />
           }
-                    {
+          {
             displaySection === 3 && <Projets dataProjets={dataProjets} />
           }          
-        </section>
+        
         </>    
     )
 };

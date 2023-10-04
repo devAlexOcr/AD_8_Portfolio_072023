@@ -14,8 +14,8 @@
 }
 .animation_LogoImg{
     animation-name: opacityLogo, translateX;
-    animation-duration: 2500ms, 2s;
-    animation-delay: 0s, 1300ms;
+    animation-duration: 1s, 1s;
+    animation-delay: 0s, 1s;
     animation-fill-mode: forwards;
 }
 .animation_LogoText{
@@ -23,8 +23,8 @@
     left: 39vw;
     opacity: 0;
     animation-name: opacityLogo;
-    animation-duration: 2500ms;
-    animation-delay: 3500ms;
+    animation-duration: 1s;
+    animation-delay: 1500ms;
     animation-fill-mode: forwards;
 }
 
@@ -51,7 +51,7 @@
     top: 15vh;
     animation-name: opacityEntry;
     animation-duration: 1300ms;
-    animation-delay: 5s;
+    animation-delay: 2s;
     animation-iteration-count: infinite;
 }
 

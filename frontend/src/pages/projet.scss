@@ -36,6 +36,16 @@
     filter: drop-shadow(10px 10px 10px grey);
 }
 
+.logo_pro{
+    a:hover {
+        transform: scaleX(1.5);
+    }
+    width: 7vw;
+    filter: drop-shadow(10px 10px 10px lightgrey);
+    margin: 2vw;
+    cursor: pointer;
+}
+
 #img_projet{
     display: flex;
     margin-top: 5vh;

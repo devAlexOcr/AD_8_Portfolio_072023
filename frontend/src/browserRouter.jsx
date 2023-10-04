@@ -30,11 +30,11 @@ function App() {
                 <Routes>
                     <Route path='/' element={<Start  />} />
                     <Route path='/home' element={<Home setPage={setPage} />} />
-                    <Route path='/projet/:id' element={<Projet />} />
-                    <Route path='/contact' element={<Contact />} />
-                    <Route path='/login' element={<Login />} />
-                    <Route path='/avis' element={<Avis />} />
-                    <Route path='*' element={<Error />} />
+                    <Route path='/projet/:id' element={<Projet setPage={setPage} />} />
+                    <Route path='/contact' element={<Contact setPage={setPage} />} />
+                    <Route path='/login' element={<Login setPage={setPage} />} />
+                    <Route path='/avis' element={<Avis setPage={setPage} />} />
+                    <Route path='*' element={<Error setPage={setPage} />} />
                 </Routes>
             </main>
             {

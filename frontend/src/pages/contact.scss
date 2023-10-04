@@ -41,25 +41,13 @@ form {
         background-color: rgba(10, 9, 9, 0.134);
         box-shadow: 2px 2px 2px grey;
     }
-    textarea {
-        padding: 1vw;
-        font-size: 1vw;
-    }
-    button {
-        font-family: 'Audiowide';
-        font-size: 2vw;
-        height: 5vh;
-        width: 20vw;
-        border-radius: 10px;
-        margin: 1vw;
-        background: none;
-        border: none;
-        cursor: pointer;
-        &:hover{
-            color: #C69C2D;
-            text-shadow: 0px 0px 20px ;
+        textarea {
+            padding: 1vw;
+            font-size: 1vw;
         }
-    }
+        button {
+            width: 20vw;
+        }
     
 }
 

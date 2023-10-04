@@ -3,14 +3,18 @@ import { useState, useEffect } from "react";
 
 import './projet.scss';
 
-function Projet() {
+import Github from '../components/projet/github.jsx';
+import Url from '../components/projet/url.jsx';
 
+function Projet({setPage}) {
+
+    setPage('projet');
+    
     const [Projet, setProjet] = useState({});
     const Params = useParams();
     const Navigate = useNavigate();
   
     useEffect(() => {
-    
       fetch('../datas/projets.json'
       ,{
           headers : { 
@@ -29,16 +33,30 @@ function Projet() {
         else {
             Navigate('/projet-inexistant')
         };
-        
       })
-    }, [Params.id, Navigate]);
-    console.log(Projet)
+    }, [Params.id, Navigate,]);
+
+    function lien(Projet) {
+        if(Projet.url) {
+            return(
+                <>
+                    <Github github={Projet.gitHub} />
+                    <Url url={Projet.url} />
+                </>
+            )
+         }else{
+            return(
+                <Github github={Projet.gitHub} />
+            )
+        }
+    }
+
+
     return (
         <section id="projet">
             <div id='img_projet'>
            <img id='cover_img' src={Projet.cover} alt={Projet.name} />
-            <div id='info_projet'>
-                
+            <div id='info_projet'>                
                 {
                     (Object.keys(Projet).length > 0) ?
                     Projet.languages.map( techno => (
@@ -47,6 +65,11 @@ function Projet() {
                     :
                     <></>
                 }
+                
+                    {
+                    lien(Projet)
+                    }
+  
             </div>
             </div>
             <div id='projet_description'>

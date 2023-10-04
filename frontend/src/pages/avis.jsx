@@ -3,8 +3,13 @@ import { useState, useEffect } from 'react';
 import Comment from '../components/avis/comment.jsx';
 import FormAvis from '../components/avis/formAvis.jsx';
 
+import './avis.scss';
 
-function Avis () {
+function Avis ({setPage}) {
+
+    setPage('Avis');
+    
+    const [ratingStar, setRating] = useState(0)
     const [Comments, setComments] = useState({});
 
     const getComment = () => {
@@ -16,16 +21,17 @@ function Avis () {
                 },
             }
         )
-        .then (res => { return res.json(); })
-        .then (data => {setComments(data.slice(0,3)); })
+        .then (res => {return res.json(); })
+        .then (data => {
+            setComments(data.slice(0,3));
+            document.getElementById('formAvis').reset();
+            setRating(0);
+         })
     };
 
     useEffect(() => {   
         getComment();
     }, [])
-
-
-
 
 
     return (
@@ -39,7 +45,7 @@ function Avis () {
                             <></>  
                     }
                 </div>
-                <FormAvis getComment={getComment}/>
+                <FormAvis getComment={getComment} ratingStar={ratingStar} setRating={setRating} />
         </section>
  
     )

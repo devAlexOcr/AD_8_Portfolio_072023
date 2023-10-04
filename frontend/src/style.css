@@ -1,32 +1,26 @@
-#avis {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#formAvis {
-  flex-direction: column;
-}
-
-#stars_Form .Stars {
-  top: 0 !important;
-  direction: rtl;
-}
-#stars_Form .Stars .fa-solid:hover,
-#stars_Form .Stars .fa-solid:focus {
-  color: orange;
+button {
+  background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(7, 51, 116) 4%, rgb(5, 40, 91) 49%, rgb(0, 0, 0) 100%);
+  font-family: "Audiowide";
+  color: white;
+  font-size: 2vw;
+  position: relative;
+  top: 0;
+  height: 4vw;
+  box-shadow: 0px 12px 1px #353535;
+  border: 1px solid black;
+  border-radius: 2vw;
+  margin: 2vw;
   cursor: pointer;
 }
-#stars_Form .Stars .fa-solid:hover ~ .fa-solid {
-  color: orange;
+button:active {
+  top: 12px;
+  box-shadow: 0px 0px 0px black;
 }
 
-#displayAvis {
-  width: 90vw;
-  margin: 10vw;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+.active {
+  top: 8px !important;
+  box-shadow: 0px 0px 0px black !important;
+  text-shadow: 0 0 20px white;
 }
 
 @font-face {

@@ -1,14 +1,13 @@
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 
 import Stars from './stars.jsx';
 
-function FormAvis({getComment}) {
+function FormAvis({getComment, ratingStar, setRating}) {
 
 const Navigate = useNavigate();
 const commentText = useRef();
-const [ratingStar, setRating] = useState(0)
 
 const userStorage = JSON.parse(localStorage.getItem('CurrentUser'));
   
