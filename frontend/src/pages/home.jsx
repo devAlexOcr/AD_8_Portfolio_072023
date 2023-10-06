@@ -4,6 +4,7 @@ import Presentation from '../components/home/presentation.jsx';
 import Technologies from '../components/home/technologies.jsx';
 import Projets from '../components/home/projets.jsx';
 
+import './home.scss';
 
 function Home({setPage}) {
     

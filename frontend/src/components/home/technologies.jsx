@@ -1,18 +1,15 @@
 import { useEffect, useState } from 'react';
+
 import './technologies.scss';
-
-
 
 
 function Technologies() {
 
-
-
     const [Logos, setLogos] = useState([]);
     useEffect(() => {
     
-        fetch('../datas/logos.json'
-        ,{
+        fetch('../datas/logos.json',
+        {
             headers : { 
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
@@ -26,17 +23,18 @@ function Technologies() {
         })
 
       }, [setLogos]);
+
     return (
-        <section id="technologie" className='open' >
+        
+        <section id="technologie" >
             <div id="logo_techno">
-             {
-                    (Object.keys(Logos).length > 0) ?
+            {
+                (Object.keys(Logos).length > 0) ?
                     Logos.map( logo => (<img  key={logo.id} id={'logo_'+logo.name} src={logo.src} alt={logo.name}/>))
-                    :
+                :
                     <></>
-                }
+            }
             </div>
-            <h2>Technologies</h2>
             <div id='table'>
                 <div>
                     <h3>&#123; Languages &#125;</h3>

@@ -27,10 +27,6 @@ button[type=button] {
   color: white !important;
 }
 
-@font-face {
-  font-family: AudioWide;
-  src: url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
-}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -43,8 +39,11 @@ code {
 }
 
 .main {
+  background-image: url("../src/assets/images/17973903.webp");
+  background-size: cover;
   position: relative;
   top: 6vw;
+  color: white;
 }
 
 h2 {

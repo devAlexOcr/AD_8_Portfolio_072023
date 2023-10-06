@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import  { Link } from 'react-router-dom';
 
 import Logo from '../assets/images/logo/custom_logo_partie_1.png'
@@ -5,7 +6,12 @@ import LogoText from '../assets/images/logo/custom_logo_partie_2.png'
 
 import './start.scss';
 
-function Start () {
+
+function Start ({setPage}) {
+
+    useEffect(()=> {
+        setPage('Start');
+    },[setPage]);
 
     return (
         <section id="home" >

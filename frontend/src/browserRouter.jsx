@@ -28,7 +28,7 @@ function App() {
             }
             <main className={(Page !== 'Start')? 'main' : '' } >
                 <Routes>
-                    <Route path='/' element={<Start  />} />
+                    <Route path='/' element={<Start setPage={setPage} />} />
                     <Route path='/home' element={<Home setPage={setPage} />} />
                     <Route path='/projet/:id' element={<Projet setPage={setPage} />} />
                     <Route path='/contact' element={<Contact setPage={setPage} />} />

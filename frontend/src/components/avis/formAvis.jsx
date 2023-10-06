@@ -37,6 +37,7 @@ const userStorage = JSON.parse(localStorage.getItem('CurrentUser'));
            return res.json();
          })
          .then(data => {
+            document.getElementById('formAvis').reset()
             getComment();
              return console.log(data);
          })}
