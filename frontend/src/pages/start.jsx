@@ -11,6 +11,7 @@ function Start ({setPage}) {
 
     useEffect(()=> {
         setPage('Start');
+        localStorage.clear();
     },[setPage]);
 
     return (

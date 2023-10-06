@@ -34,7 +34,7 @@
     #img_preview {
         width: 45vw;
         height: 40vh;
-        box-shadow: 10px 10px 15px grey;
+        box-shadow: 5px 5px 15px grey;
         border-radius: 20px;
     }
 }
@@ -50,14 +50,15 @@
 #name_projet {
     li {
         list-style: none;
-        opacity: 0.1;
         cursor: pointer;
-        &:hover{
-            opacity: 1;
+        a:hover{
+            color: white !important;
+            text-shadow: 0 0 20px #fff;
         }
         a {
             text-decoration: none;
             font-size: 3vw;
+            color: #a3a1a1;
         }
     }
 }

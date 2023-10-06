@@ -24,7 +24,6 @@ function Avis ({setPage}) {
         .then (res => {return res.json(); })
         .then (data => {
             setComments(data.slice(0,3));
-            document.getElementById('formAvis').reset();
             setRating(0);
          })
     };
