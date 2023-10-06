@@ -13,7 +13,6 @@ const userStorage = JSON.parse(localStorage.getItem('CurrentUser'));
   
     function publish(action) {
         if (userStorage == null ) {
-            console.log('message user vide')
             Navigate('/login')
         }else{ 
         const comment = {
@@ -23,7 +22,7 @@ const userStorage = JSON.parse(localStorage.getItem('CurrentUser'));
             content : commentText.current.value,
             rating: ratingStar
         }
-        console.log(comment);
+      
 
          fetch('https://api.alexandrepaucdetoc.fr/avis', 
              {

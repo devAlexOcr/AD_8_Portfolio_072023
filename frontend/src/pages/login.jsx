@@ -1,4 +1,4 @@
-import{ useRef, useState } from 'react';
+import{ useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import './login.scss'
@@ -6,8 +6,10 @@ import './login.scss'
 
 function Login({setPage}) {
 
-    setPage('login');
-
+    useEffect(() => {
+        setPage('Login');
+    },[setPage]);
+    
 
     const [Form, SetForm]= useState(1);
 
@@ -53,14 +55,19 @@ function Login({setPage}) {
                 }else{
                     document.getElementById('form_signUp').reset();
                 }
-                setCurrentUser(data);
-                Navigate('/home')
+
+                if(data[0].idUser === '0'){
+                    alert(' Paire identifiant / mot de passe incorrect ! ')
+                }else{
+                    localStorage.setItem('CurrentUser', JSON.stringify(data));
+                    Navigate('/home') 
+                }
             })  
         };
 
-    const [currentUser, setCurrentUser] = useState(['User non connecté']);
+    
 
-    localStorage.setItem('CurrentUser', JSON.stringify(currentUser));
+    
     
     return (
         <section id="login">

@@ -1,25 +1,9 @@
-#presentation {
-    width: 90vw;
-    height: 100vh;
-    margin: auto;
-    display: flex;
-}
-.open{
-    height: 71vh;
-    top: 22vh;
-    opacity: 1!important;
-    transition: opacity 3s;
-    transition-delay: 400ms;
-}
-
 #description {
+    width: 90vw;
+    height: auto;
+    margin: 5vw auto;
     display: flex;
     justify-content: space-between;
-    width: 90vw;
-    height: 80vh;
-    margin: auto;
-    overflow: hidden;
-    opacity: 0;
     p {
         width: 50vw;
         font-size: 2vw;
@@ -34,11 +18,29 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    position: relative;
-    top: 6vh;
-    left: 1vw;
     border-radius: 145px;
-    box-shadow: 5px 5px 20px 4px;
+    box-shadow: 5px 5px 10px 0px;
+}
+
+@media all and (max-width: 768px) {
+    #description {
+        flex-direction: column;
+        align-items: center;
+        justify-content: normal;
+        #portrait {
+            width: 60vw;
+            height: 30vw;
+            box-shadow: 0 0 0 0 ;
+            border-radius: 0;
+            background-size: contain;
+        }
+        p {
+            padding: 0;
+            width: 90vw;
+            font-size: 5vw;
+            text-align: center;
+        }
+    }
 }
 
 

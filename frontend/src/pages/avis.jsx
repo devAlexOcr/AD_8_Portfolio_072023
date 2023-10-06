@@ -7,7 +7,7 @@ import './avis.scss';
 
 function Avis ({setPage}) {
 
-    setPage('Avis');
+    
     
     const [ratingStar, setRating] = useState(0)
     const [Comments, setComments] = useState({});
@@ -29,9 +29,10 @@ function Avis ({setPage}) {
          })
     };
 
-    useEffect(() => {   
+    useEffect(() => {  
+        setPage('Avis'); 
         getComment();
-    }, [])
+    }, [setPage])
 
 
     return (

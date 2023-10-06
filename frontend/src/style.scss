@@ -39,8 +39,10 @@ h3 {
 }
 
 @media all and (max-width: 768px) {
-
   main {
     top: 26vw;
+  }
+  p {
+    font-size: 5vw;
   }
 }

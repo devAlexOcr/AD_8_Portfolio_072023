@@ -10,7 +10,7 @@ import Error from '../src/pages/error.jsx';
 import Avis from '../src/pages/avis.jsx';
 import Start from '../src/pages/start.jsx';
 
-import Header from '../src/components/header/index.jsx';
+import Header from './components/header/index.jsx';
 import Footer from '../src/components/footer/footer.jsx';
 
 
@@ -24,7 +24,7 @@ function App() {
        
         <BrowserRouter>
             {
-                Page !== 'Start' && <Header setPage={setPage} />
+                Page !== 'Start' && <Header Page={Page} setPage={setPage} />
             }
             <main className={(Page !== 'Start')? 'main' : '' } >
                 <Routes>

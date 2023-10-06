@@ -46,13 +46,17 @@ form {
             font-size: 1vw;
         }
         button {
-            width: 20vw;
+            width: 30vw;
         }
     
 }
 
 @media all and (max-width: 1024px) {
     form {
+        flex-direction: column;
+        label, input {
+            font-size: 4vw;
+        }
         #form1, #form2 {
             width: 80vw;
               #message {width: 80vw;}

@@ -6,12 +6,13 @@ import Projets from '../components/home/projets.jsx';
 
 
 function Home({setPage}) {
-    setPage('Home');
+    
     const [dataProjets, setProjets] = useState([]);
     const [displaySection, setDisplaySection] = useState(1);
-    console.log(displaySection)
-  
+
+
   useEffect(() => {
+    setPage('Home');
     fetch('datas/projets.json'
     ,{
         headers : { 
@@ -26,7 +27,7 @@ function Home({setPage}) {
       setProjets(data);
       
     })
-  }, []);
+  }, [setPage]);
 
   
 

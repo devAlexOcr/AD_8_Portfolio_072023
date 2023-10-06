@@ -1,8 +1,13 @@
+import { useEffect } from 'react';
+
 import './error.scss'
 
 function Error({setPage}) {
 
-    setPage('error');
+    useEffect(() => {
+        setPage('error');
+    }, [setPage])
+        
     
     return (
         <div id="error">

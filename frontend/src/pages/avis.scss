@@ -14,11 +14,11 @@
         direction: rtl;
          .fa-solid:hover,
          .fa-solid:focus {
-            color: orange;
+            color: #ffc72c;
             cursor: pointer;
          }
          .fa-solid:hover ~ .fa-solid {
-            color: orange;
+            color: #ffc72c;
         }
     }  
 }
@@ -29,4 +29,26 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+}
+
+@media all and (max-width: 768px) {
+    #displayAvis {
+        flex-direction: column;
+        .comment {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            text-align: center;
+            height: 40vw;
+            margin: 2vw;
+        }
+    }
+    .Stars{
+        font-size: 4vw;
+    }
+    #avis {
+        .Stars {
+            margin: 0;
+        }
+    }
 }

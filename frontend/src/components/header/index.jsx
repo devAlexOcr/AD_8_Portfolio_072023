@@ -5,8 +5,11 @@ import LogoText from '../../assets/images/logo/custom_logo_partie_2.png'
 import './header.scss';
 
 
-function Header({setPage}) {
-
+function Header({Page, setPage}) {
+//     const idUser = JSON.parse(localStorage.getItem('CurrentUser'))[0].idUser;
+//     const [Log, setLog] = useState(idUser)
+//    console.log(Log)
+    
     return (
         <header>
             <Link to='/' onClick={()=>setPage('Start')}>
@@ -17,10 +20,17 @@ function Header({setPage}) {
             </Link>
 
             <nav  id='nav_header'>
-                <Link to="/home" >Accueil</Link>
-                <Link to="Contact">Contact</Link> 
-                <Link to="/Login">Login</Link>
-                <Link to="/avis">Avis</Link>
+                <Link to="/home"    className={(Page === 'Home')? 'active' : ''}>Accueil </Link>
+                <Link to="Contact"  className={(Page === 'Contact')? 'active' : ''}>Contact </Link> 
+                {
+                //   Log === '0' && 
+                  <Link to="/Login"   className={(Page === 'Login')? 'active' : ''}>Login</Link>
+                }
+                {
+                //    Log !== '0' && 
+                   <Link to="/"    className={(Page === 'Login')? 'active' : ''}> Log Out</Link>
+                }
+                <Link to="/avis"    className={(Page === 'Avis')? 'active' : ''}>Avis</Link>
             </nav>  
         </header>
     )
