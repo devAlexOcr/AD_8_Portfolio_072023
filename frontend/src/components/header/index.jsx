@@ -9,12 +9,10 @@ import './header.scss';
 
 function Header({Page, setPage, Log, setLog}) {
     const currentUserData = localStorage.getItem('CurrentUser');
-    const idUser = currentUserData ? JSON.parse(currentUserData)[1][0].idUser : null;
-    console.log(currentUserData)
+    const idUser = currentUserData ? JSON.parse(currentUserData)[1][0]?.idUser : null;
+    
     useEffect(() => {
-        if(idUser !== null) {
-            setLog(idUser);
-        }
+        setLog(idUser);
     }, [setLog, idUser])
     
     function disconnect() {

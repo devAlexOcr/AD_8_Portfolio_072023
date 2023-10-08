@@ -10,6 +10,7 @@ const Navigate = useNavigate();
 const commentText = useRef();
 
 const userStorage = JSON.parse(localStorage.getItem('CurrentUser'));
+
   
     function publish(action) {
         if (userStorage == null ) {
@@ -17,8 +18,8 @@ const userStorage = JSON.parse(localStorage.getItem('CurrentUser'));
         }else{ 
         const comment = {
             action: action,
-            name: userStorage[0].name,
-            firstname: userStorage[0].firstname,
+            name: userStorage[1].name,
+            firstname: userStorage[1].firstname,
             content : commentText.current.value,
             rating: ratingStar
         }
