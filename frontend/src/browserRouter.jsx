@@ -19,12 +19,13 @@ import Footer from '../src/components/footer/footer.jsx';
 function App() {
 
    const [Page, setPage] = useState('Start')
+   const [Log, setLog] = useState(null)
 
     return (
        
         <BrowserRouter>
             {
-                Page !== 'Start' && <Header Page={Page} setPage={setPage} />
+                Page !== 'Start' && <Header Page={Page} setPage={setPage} Log={Log} setLog={setLog} />
             }
             <main className={(Page !== 'Start')? 'main' : '' } >
                 <Routes>
@@ -33,7 +34,7 @@ function App() {
                     <Route path='/projet/:id' element={<Projet setPage={setPage} />} />
                     <Route path='/contact' element={<Contact setPage={setPage} />} />
                     <Route path='/login' element={<Login setPage={setPage} />} />
-                    <Route path='/avis' element={<Avis setPage={setPage} />} />
+                    <Route path='/avis' element={<Avis setPage={setPage} Log={Log} />} />
                     <Route path='*' element={<Error setPage={setPage} />} />
                 </Routes>
             </main>

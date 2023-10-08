@@ -80,3 +80,27 @@
         opacity: 0;
     }
 }
+
+@media all and (max-width: 768px) {
+    #accueil #logo2 {
+        width: 65vw;
+    }
+    #accueil #logo1{
+        width: 30vw;
+    }
+    @keyframes translateX{
+        from {
+            transform: translateX(0px);
+            animation-timing-function: cubic-bezier(0.14, 0.01, 0.01, 0.98);
+        }
+        to {
+            transform: translateX(-30vw);
+        }
+    }
+    .animation_LogoText{
+        left: 28vw;
+    }
+    #entry {
+        font-size: 9vw;
+    }
+}

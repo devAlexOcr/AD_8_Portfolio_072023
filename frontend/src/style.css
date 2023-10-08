@@ -54,13 +54,13 @@ h2 {
 
 h3 {
   font-family: AudioWide !important;
-  font-size: 1.5vw;
+  font-size: 3vw;
   font-weight: 800;
 }
 
 @media all and (max-width: 768px) {
   main {
-    top: 26vw;
+    top: 20vw !important;
   }
   p {
     font-size: 5vw;

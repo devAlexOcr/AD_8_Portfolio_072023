@@ -1,5 +1,5 @@
 import  { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 import Logo from '../../assets/images/logo/custom_logo_partie_1.png'
 import LogoText from '../../assets/images/logo/custom_logo_partie_2.png'
@@ -7,14 +7,14 @@ import LogoText from '../../assets/images/logo/custom_logo_partie_2.png'
 import './header.scss';
 
 
-function Header({Page, setPage}) {
-
-    const [Log, setLog] = useState(null)
+function Header({Page, setPage, Log, setLog}) {
     const currentUserData = localStorage.getItem('CurrentUser');
-    const idUser = currentUserData ? JSON.parse(currentUserData)[0].idUser : null;
-
+    const idUser = currentUserData ? JSON.parse(currentUserData)[1][0].idUser : null;
+    console.log(currentUserData)
     useEffect(() => {
-        setLog(idUser);
+        if(idUser !== null) {
+            setLog(idUser);
+        }
     }, [setLog, idUser])
     
     function disconnect() {
@@ -40,7 +40,7 @@ function Header({Page, setPage}) {
                 }
                 {
                    Log !== null && 
-                   <Link to="/"    onClick={()=>disconnect()} className={(Page === 'Login')? 'active' : ''}> Log Out</Link>
+                   <Link to="/login"    onClick={()=>disconnect()} className={(Page === 'Login')? 'active' : ''}> Log Out</Link>
                 }
                 <Link to="/avis"    className={(Page === 'Avis')? 'active' : ''}>Avis</Link>
             </nav>  

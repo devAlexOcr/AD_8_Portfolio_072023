@@ -3,7 +3,6 @@
     height: auto;
     padding: 3vw;
     p {font-size: 2vw;}
-    h3 {font-size: 4vw;}
 }
 
 form {
@@ -55,6 +54,14 @@ form {
 }
 
 @media all and (max-width: 1024px) {
+    #contact {       
+        p {
+        font-size: 3vw;
+        }
+        h3 {
+            font-size: 5vw;
+        }
+    }
     form {
         flex-direction: column;
         label, input {

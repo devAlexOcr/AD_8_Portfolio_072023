@@ -11,7 +11,7 @@ function Login({setPage}) {
     },[setPage]);
     
 
-    const [Form, SetForm]= useState(1);
+    const [Form, SetForm]= useState('login');
 
     const Navigate = useNavigate();
 
@@ -50,19 +50,16 @@ function Login({setPage}) {
                 return res.json();
             })
             .then(data => {
-                if(Form === 1) {
-                    document.getElementById('form_login').reset();
-                }else{
-                    document.getElementById('form_signUp').reset();
-                }
-
-                if(data[0].idUser === '0'){
-                    alert(' Paire identifiant / mot de passe incorrect ! ')
-                }else{
+            
+                document.querySelector('form').reset();
+                console.log(data)
+                if(data[0].status === '1'){
                     localStorage.setItem('CurrentUser', JSON.stringify(data));
-                    Navigate('/home') 
+                    Navigate('/avis')
                 }
-            })  
+                if(data[0].status === '-1'){alert(data[0].message)}
+                if(data[0].status === '0'){alert(data[0].message)}
+            }) 
         };
 
     
@@ -70,13 +67,12 @@ function Login({setPage}) {
     
     
     return (
-        <section id="login">
-            <h2>Connection</h2> 
+        <section id="login">         
                 <nav id='nav_login'>
-                        <button onClick={()=>SetForm(1)}className={(Form === 1) ? 'active' : ''} > LogIn </button>
-                        <button onClick={()=>SetForm(2)} className={(Form === 2) ? 'active' : ''} > SignUp </button>
+                    <button onClick={()=>SetForm('login')}className={(Form === 'login') ? 'active' : ''} > LogIn </button>
+                    <button onClick={()=>SetForm('signup')} className={(Form === 'signup') ? 'active' : ''} > SignUp </button>
                 </nav>
-                {Form === 1 &&        
+                {Form === 'login' &&        
                     <form method='post' id='form_login'>
                         <label htmlFor="email">Email</label>
                             <input ref={email} type='email' name='email' id='login2'/>
@@ -85,7 +81,7 @@ function Login({setPage}) {
                         <button  type ='button' onClick={()=>clickLogin('log')} id='se_connecter'>Se connecter</button>
                     </form>
                 }
-                {Form === 2 && 
+                {Form === 'signup' && 
                     <form method='post' id='form_signUp'>
                         <label htmlFor='name'>Name</label>
                             <input ref={name} type='text' />

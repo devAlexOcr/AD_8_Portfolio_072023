@@ -7,3 +7,14 @@
             width: 20vw;
         }
 }
+
+@media all and (max-width: 768px) {
+    #nav_home button {
+        width: 32vw;
+    }
+    button {
+        font-size: 3vw !important;
+        height: 8vw !important;
+
+    }
+}

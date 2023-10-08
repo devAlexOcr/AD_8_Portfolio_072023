@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import Comment from '../components/avis/comment.jsx';
 import FormAvis from '../components/avis/formAvis.jsx';
 
 import './avis.scss';
 
-function Avis ({setPage}) {
+function Avis ({setPage, Log}) {
 
     
     
@@ -34,9 +35,22 @@ function Avis ({setPage}) {
     }, [setPage])
 
 
+
     return (
         <section id='avis'>
             <h2>Ils en pensent quoi ?</h2>
+            {
+                Log === null && 
+                    <div id='avis_login'>
+                        <p>Envie de laisser votre avis ?</p>
+                        <button type='button'><Link to='/login'>Connectez-vous</Link></button>
+                    </div>
+            }
+            {
+                Log !== null && 
+                <FormAvis getComment={getComment} ratingStar={ratingStar} setRating={setRating} />
+            }
+
                 <div id='displayAvis'>
                     {
                         (Object.keys(Comments).length >0) ?
@@ -45,7 +59,7 @@ function Avis ({setPage}) {
                             <></>  
                     }
                 </div>
-                <FormAvis getComment={getComment} ratingStar={ratingStar} setRating={setRating} />
+                
         </section>
  
     )

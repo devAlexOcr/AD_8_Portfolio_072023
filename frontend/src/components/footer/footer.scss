@@ -5,9 +5,15 @@ footer {
     align-items: center;
     background: black;
     color: white;
-    position: relative;
     margin-top: 5vw;
+    padding: 2vw 0;
     p{
         margin: 2vh;
+    }
+}
+
+@media all and (max-width: 768px) {
+    footer {
+        margin-top: 20vw;
     }
 }

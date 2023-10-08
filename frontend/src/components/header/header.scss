@@ -8,17 +8,17 @@ header {
     z-index: 3;
     background: radial-gradient(circle, rgba(3,30,54,1) 0%, rgba(0,0,0,1) 100%);
     z-index: 3;
-    height: 6vw !important;
+    height: 6vw;
     transition: height 600ms;
     a {
         display: flex;
         margin: 2vw;
     }
     #logo1 {
-        width: 7vw !important;
+        width: 7vw;
     }
     #logo2 {
-        width: 20vw !important;
+        width: 20vw;
     }
     #accueil{
         width: 95vw;
@@ -34,9 +34,8 @@ header {
     margin-right: 2vw;
     a {
         color: #a3a1a1;
-        font-family: AudioWide;
+        font-family: 'AudioWide';
         text-decoration: none;
-        margin: 0 20px;
         &:hover {
             transform: scale(1.2);
             transition: transform 600ms;
@@ -48,11 +47,18 @@ header {
 }
 
 @media all and (max-width: 768px) {
-    .header{
-        height: 30vw !important;
+    header{
+        height: 20vw;
+        #logo2  {
+            display: none;
+        }
     }
+    #logo1 {
+        width: 20vw!important;
+    }
+    
     #nav_header {
-        font-size: 2vw;
+        font-size: 4vw;
     }
 
 }

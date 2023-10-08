@@ -9,7 +9,7 @@
 
 #formation{
     & button {
-        width: 100%;
+        width: 95%;
         height: 30vh;
         background: url('../../assets/images/Openclassrooms.png');
         background-size: cover;
@@ -96,4 +96,15 @@
     text-align: left;
     width: 15vw;
     cursor: pointer;
+}
+
+@media all and (max-width: 768px) {
+    #projets {
+        h2 {
+            font-size: 8vw;
+        }
+    }
+    #formation button {
+        height: 20vw!important;
+    }
 }
