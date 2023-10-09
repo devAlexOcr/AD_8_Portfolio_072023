@@ -98,6 +98,48 @@
     cursor: pointer;
 }
 
+.mobile {
+    // height: auto !important;
+    #img_preview {
+        display: none;
+    }
+    #preview_projet {
+        display: none;
+    }
+    #titre_projet {
+        width: 90%;
+        margin: auto;
+        height: auto;
+        top: -2vw; 
+        #name_projet {
+            padding: 0;
+            gap: 3vw;
+        } 
+        ul{ 
+        a {
+            width: 90%;
+            margin: auto;
+        }
+        li{
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 1vw;
+            border: 2px solid black;
+            padding: 14vw 0;
+            box-shadow: 0.2vw 0.2vw 1vw #909090;
+        }
+    }
+        
+        #name_projet {
+            height: auto;
+        }
+    }
+    #container {
+        height: auto;
+    }
+}
+
 @media all and (max-width: 768px) {
     #projets {
         h2 {

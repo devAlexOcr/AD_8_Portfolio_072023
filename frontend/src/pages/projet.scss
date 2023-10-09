@@ -33,7 +33,7 @@
 }
 .logo {
     height: 10vw !important;
-    filter: drop-shadow(10px 10px 10px grey);
+    filter: drop-shadow(0.2vw 0.2vw 0.2vw grey);
 }
 
 .logo_pro{
@@ -41,7 +41,7 @@
         transform: scaleX(1.5);
     }
     width: 7vw;
-    filter: drop-shadow(10px 10px 10px lightgrey);
+    filter: drop-shadow(0.2vw 0.2vw 1vw lightgrey);
     margin: 2vw;
     cursor: pointer;
 }
@@ -61,6 +61,20 @@
         }
         #info_projet{
            width: 90vw;
+        }
+    }
+    #projet_description {
+        p {
+            font-size: 5vw;
+        }
+        h3{
+            font-size: 10vw;
+        }
+        li {font-size: 5vw;}
+    }
+    #projet {
+        #cover_img {
+            box-shadow: 1vw 1vw 1vw grey;
         }
     }
 }
