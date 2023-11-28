@@ -14,9 +14,33 @@ function Projet({setPage}) {
     const Params = useParams();
     const Navigate = useNavigate();
   
+    console.log(Params.id)
+    
     useEffect(() => {
         setPage('projet');
-        fetch('../datas/projets.json',
+        if (Params.id <= 100){
+        fetch('../datas/projetsOpenclassrooms.json',
+        {
+          headers : { 
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+          }
+        })
+        .then(function(response){          
+          return response.json();
+        })
+        .then(function(data) {          
+            const projet = data.find((projetUnique) => projetUnique.id === Params.id)
+            if (projet){
+                setProjet(projet)
+
+            }
+            else {
+                Navigate('/projet-inexistant')
+            };
+        })
+    }else {
+            fetch('../datas/sideProjets.json',
         {
           headers : { 
               'Content-Type': 'application/json',
@@ -35,7 +59,12 @@ function Projet({setPage}) {
                 Navigate('/projet-inexistant')
             };
         })
+        }
     }, [Params.id, Navigate, setPage]);
+
+
+
+
 
     function lien(Projet) {
         if(Projet.url) {
@@ -51,7 +80,7 @@ function Projet({setPage}) {
             )
         }
     }
-
+ 
 
     return (
         <section id="projet">
@@ -61,7 +90,7 @@ function Projet({setPage}) {
                 {
                     (Object.keys(Projet).length > 0) ?
                     Projet.languages.map( techno => (
-                        <img key={techno.index} className='logo' src={techno} alt={techno} />
+                        <img key={techno} className='logo' src={techno} alt={techno} />
                         ))
                     :
                     <></>
@@ -75,10 +104,14 @@ function Projet({setPage}) {
             </div>
             <div id='projet_description'>
                 <p>{Projet.description}</p>
-                    <h3>compétences</h3>
+                   
+            {
+                Params.id <= 100 &&
+            <>
+                   <h3>compétences</h3>
             {   
                 (Object.keys(Projet).length > 0) ?
-                Projet.competence.map( techno => (<li>{techno}</li>))
+                Projet.competence.map( techno => (<li key={techno}>{techno}</li>))
                 :
                 <></>
             }           
@@ -87,16 +120,18 @@ function Projet({setPage}) {
        
             {
                 (Object.keys(Projet).length > 0) ?
-                    Projet.problematiques.map( prob => (<li>{prob}</li>))
+                    Projet.problematiques.map( prob => (<li key={prob}>{prob}</li>))
                 :
                 <></>
             }
             {
                 (Object.keys(Projet).length > 0) ?
-                    Projet.solutions.map( sol => (<li>{sol}</li>))
+                    Projet.solutions.map( sol => (<li key={sol}>{sol}</li>))
                 :
                 <></>   
-            }       
+            }
+            </>
+        }       
                 
            </div>
         </section>

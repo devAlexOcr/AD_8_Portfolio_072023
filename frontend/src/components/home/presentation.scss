@@ -1,13 +1,13 @@
 #description {
     width: 90vw;
     height: auto;
-    margin: 5vw auto;
+    margin: auto;
+    padding: 2vw 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     p {
         width: 50vw;
-        font-size: 2vw;
-        padding: 8vw;
+        font-size: 1.5vw;
     }
 }
 
@@ -20,6 +20,11 @@
     background-position: center;
     border-radius: 145px;
     box-shadow: 5px 5px 10px 0px #353535;
+}
+#presentation img{
+    display: inline;
+    height: 3vw;
+    margin: 0 1vw;
 }
 
 @media all and (max-width: 768px) {

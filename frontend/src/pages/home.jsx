@@ -8,13 +8,13 @@ import './home.scss';
 
 function Home({setPage}) {
     
-    const [dataProjets, setProjets] = useState([]);
+    const [dataProjets, setDataProjets] = useState([]);
     const [displaySection, setDisplaySection] = useState('presentation');
 
 
   useEffect(() => {
     setPage('Home');
-    fetch('datas/projets.json'
+    fetch('datas/projetsOpenclassrooms.json'
     ,{
         headers : { 
             'Content-Type': 'application/json',
@@ -25,8 +25,7 @@ function Home({setPage}) {
         return response.json();
     })
     .then(function(data) {          
-      setProjets(data);
-      
+      setDataProjets(data);
     })
   }, [setPage]);
 

@@ -34,7 +34,7 @@
         "cover": "../assets/images/portfolio_sophie_bluel.png",
         "competence": [
             "Récupérer les données utilisateurs dans le JavaScript vie des formulaires",
-            "Manipuler les éléments du DOM avec JavaScrip",
+            "Manipuler les éléments du DOM avec JavaScript",
             "Gérer les événements utilisateurs avec JavaScript"
         ],
         "problematiques": [
@@ -118,7 +118,7 @@
         "id": "5",
         "name": "Mon vieux Grimoire",
         "objectif": "Développement du back-end d'un site de notation de livres",
-        "description": "",
+        "description": "Dans la peau d'un développeur back-end en freelance, je suis contacté afin de travailler en collaboration avec un développeur front-end plus expérimenté pour déployer le back-end d'une petite chaîne de librairie souhaitant ouvrir un site de référencement et de notation de livres.",
         "cover": "https://user.oc-static.com/upload/2022/10/11/16654934257102_DW-P7-Back-end_company-banner.png",
         "competence": [
             "Implémenter un modèle logique de données conforméments à la réglementation",

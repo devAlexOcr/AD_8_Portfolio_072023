@@ -42,6 +42,8 @@ function Technologies() {
                         <li>Html</li>
                         <li>Css</li>
                         <li>JavaScript</li>
+                        <li>PHP in progress</li>
+                        <li>MySql in progress</li>
                     </ul>
                 </div>
                 <div>
@@ -54,6 +56,7 @@ function Technologies() {
                         <li>Node</li>
                         <li>ExpressJS</li>
                         <li>MongoDb</li>
+                        <li>PhpMyAdmin</li>
                     </ul>
                 </div>
             </div>

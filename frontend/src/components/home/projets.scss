@@ -1,17 +1,20 @@
 #projets {
     display: flex;
     width: 90vw;
-    height: 85vh;
+    min-height: 85vh;
     margin: auto;
     flex-direction: column;
-    color: #ffc72c;
+    
+    a {
+        text-decoration: none;
+        color: #ffc72c;
+    }
 }
 
 #formation{
     & button {
         width: 95%;
         height: 30vh;
-        background: url('../../assets/images/Openclassrooms.png');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -19,12 +22,41 @@
         border-radius: 20px;
         box-shadow: 5px 5px 5px rgb(78, 2, 70);
         cursor: pointer;
+        font-size: 6vw;
+        color: white;
     }
 }
 
-#container{
+#openclassrooms {
+    background: url('../../assets/images/Openclassrooms.png');
+}
+
+#sideProjet {
+    opacity: 0.7;
+}
+
+.cardSideProjet{
+    width: 20vw;
+    min-height: 25vw;
+    border-radius: 3vw;
+    background-size: contain;
+    align-content: center;
+    margin-bottom: 3vw;
+    h3 {
+        color: black;
+        margin: 1vw 2vw;
+        font-size: 1vw;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        white-space: nowrap;
+        letter-spacing: -0.2vw;
+    }
+}
+
+.container{
     display: none;
-    height: 58vh;
+    justify-content: center!important;
+    min-height: 58vh;
     width: 90vw;
     justify-content: space-between;
 }
@@ -78,18 +110,6 @@
     gap: 1vh;
 }
 
-
-
-#container_preview{
-    a{
-        img {
-            object-fit: contain;
-            height: 10vh;
-            margin: 1.5vw 0;
-        }
-    }
-}
-
 #Btn_projets {
     border: none;
     background: none;
@@ -99,7 +119,6 @@
 }
 
 .mobile {
-    // height: auto !important;
     #img_preview {
         display: none;
     }
