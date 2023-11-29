@@ -67,10 +67,10 @@ function Projets({dataProjets}) {
     return (
       
     <section id='projets' className={containerClass} ref={projetsId} >
-      <h2><Link onClick={() => ViewCategories()}>Projets</Link></h2>
+      <h2><Link onClick={ViewCategories}>Projets</Link></h2>
         <div id='formation' ref={Openclassrooms}>
-          <button id="openclassrooms" onClick={() =>ProjetOpenclassrooms()}></button>
-          <button id='sideProjet' onClick={() =>SideProjet()}>Side Project</button>
+          <button id="openclassrooms" onClick={ProjetOpenclassrooms}></button>
+          <button id='sideProjet' onClick={SideProjet}>Side Project</button>
         </div>
         <div className='container' ref={container}>
           <div id='preview_projet' ref={PreviewRef}>

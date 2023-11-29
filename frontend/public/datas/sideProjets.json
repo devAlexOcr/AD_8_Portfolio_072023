@@ -5,6 +5,7 @@
         "cover": "../assets/images/qwirkle_bg.jpg",
         "description": "Pour répondre à la problématique du compte de points lors d'une partie de Qwirkle, j'ai décidé de développer une application web optimisée pour une utilisation sur smartphone.",
         "url": "https://qwirkle.alexandrepaucdetoc.fr/",
+        "gitHub": "https://github.com/devAlexOcr/Qwirkle_Score_Counter",
         "languages": [
             "../assets/logos/React_logo.png",
             "../assets/logos/sass_logo.png"  

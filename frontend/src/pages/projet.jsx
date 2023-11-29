@@ -68,6 +68,7 @@ function Projet({setPage}) {
 
     function lien(Projet) {
         if(Projet.url) {
+            console.log(Projet.gitHub)
             return(
                 <>
                     <Github github={Projet.gitHub} />

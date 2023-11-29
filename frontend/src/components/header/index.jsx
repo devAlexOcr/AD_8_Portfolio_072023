@@ -38,7 +38,7 @@ function Header({Page, setPage, Log, setLog}) {
                 }
                 {
                    Log !== null && 
-                   <Link to="/login"    onClick={()=>disconnect()} className={(Page === 'Login')? 'active' : ''}> Log Out</Link>
+                   <Link to="/login"    onClick={disconnect} className={(Page === 'Login')? 'active' : ''}> Log Out</Link>
                 }
                 <Link to="/avis"    className={(Page === 'Avis')? 'active' : ''}>Avis</Link>
             </nav>  

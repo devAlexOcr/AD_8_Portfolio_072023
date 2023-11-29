@@ -46,6 +46,15 @@
             text-align: center;
         }
     }
+    #presentation div {
+        display: flex;
+        justify-content: space-evenly;
+        img{
+        height: 10vw;
+        text-align: center;
+        margin: 0 1vw;
+    }
+}
 }
 
 
