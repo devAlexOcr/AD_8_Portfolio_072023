@@ -49,9 +49,23 @@
 }
 
 #img_projet{
+    width: 100%;
     display: flex;
     margin-top: 5vh;
 }
+.chevron, .chevron_prev {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 13.1l-8-8 2.1-2.2 5.9 5.9 5.9-5.9 2.1 2.2z'/%3E%3C/svg%3E");
+    height: 50px;
+    width: 50px;
+    transform: rotate(-90deg);
+    filter: drop-shadow(0px 2px 6px white);
+    position: relative;
+    top: 10vw;
+  }
+  .chevron_prev {
+    transform: rotate(90deg);
+    right: 3vw;
+  }
 
 @media all and (max-width: 768px) {
     #img_projet{

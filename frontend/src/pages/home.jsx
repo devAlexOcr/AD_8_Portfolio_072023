@@ -6,29 +6,26 @@ import Projets from '../components/home/projets.jsx';
 
 import './home.scss';
 
-function Home({setPage}) {
+function Home({setPage, dataProjets, setDataProjets}) {
     
-    const [dataProjets, setDataProjets] = useState([]);
     const [displaySection, setDisplaySection] = useState('presentation');
 
-
-  useEffect(() => {
-    setPage('Home');
-    fetch('datas/projetsOpenclassrooms.json'
-    ,{
-        headers : { 
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        }
-    })
-    .then(function(response){          
-        return response.json();
-    })
-    .then(function(data) {          
-      setDataProjets(data);
-    })
-  }, [setPage]);
-
+    useEffect(() => {
+      setPage('Home');
+      fetch('datas/projetsOpenclassrooms.json'
+      ,{
+          headers : { 
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+          }
+      })
+      .then(function(response){          
+          return response.json();
+      })
+      .then(function(data) {          
+        setDataProjets(data);
+      })
+    }, [setPage])
   
 
     return (

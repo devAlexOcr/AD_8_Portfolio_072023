@@ -4,7 +4,7 @@ import './projets.scss';
 
 
 function Projets({dataProjets}) {
-
+  console.log(dataProjets)
   const [sideProjets, setSideProjets] = useState([]);
   const PreviewRef = useRef();
   const Openclassrooms = useRef();

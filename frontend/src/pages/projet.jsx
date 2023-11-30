@@ -1,4 +1,4 @@
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import './projet.scss';
@@ -6,15 +6,13 @@ import './projet.scss';
 import Github from '../components/projet/github.jsx';
 import Url from '../components/projet/url.jsx';
 
-function Projet({setPage}) {
+function Projet({setPage, dataProjets}) {
 
     
     
     const [Projet, setProjet] = useState({});
     const Params = useParams();
     const Navigate = useNavigate();
-  
-    console.log(Params.id)
     
     useEffect(() => {
         setPage('projet');
@@ -68,7 +66,6 @@ function Projet({setPage}) {
 
     function lien(Projet) {
         if(Projet.url) {
-            console.log(Projet.gitHub)
             return(
                 <>
                     <Github github={Projet.gitHub} />
@@ -81,12 +78,19 @@ function Projet({setPage}) {
             )
         }
     }
- 
-
+    const next = Number(Projet.id)+1;
+    const prev = Number(Projet.id)-1;
     return (
         <section id="projet">
             <div id='img_projet'>
-           <img id='cover_img' src={Projet.cover} alt={Projet.name} />
+            {    
+            1 <= prev &&  
+                <Link to={/projet/+prev}>      
+                    <div id='prev' className='chevron_prev'>                    
+                    </div>
+                </Link>
+            }
+                <img id='cover_img' src={Projet.cover} alt={Projet.name} />
             <div id='info_projet'>                
                 {
                     (Object.keys(Projet).length > 0) ?
@@ -102,6 +106,14 @@ function Projet({setPage}) {
                     }
   
             </div>
+
+                {    
+                dataProjets.length >= next &&  
+                <Link to={/projet/+next}>      
+                    <div id='next' className='chevron'>                    
+                    </div>
+                </Link>
+                }
             </div>
             <div id='projet_description'>
                 <p>{Projet.description}</p>

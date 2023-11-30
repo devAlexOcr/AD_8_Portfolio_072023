@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 // pages
@@ -21,6 +21,24 @@ function App() {
    const [Page, setPage] = useState('Start')
    const [Log, setLog] = useState(null)
 
+   const [dataProjets, setDataProjets] = useState([]);
+console.log(dataProjets)
+   useEffect(() => {
+    fetch('datas/projetsOpenclassrooms.json'
+    ,{
+        headers : { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        }
+    })
+    .then(function(response){          
+        return response.json();
+    })
+    .then(function(data) {          
+      setDataProjets(data);
+    })
+  }, []);
+
     return (
        
         <BrowserRouter>
@@ -30,8 +48,8 @@ function App() {
             <main className={(Page !== 'Start')? 'main' : '' } >
                 <Routes>
                     <Route path='/' element={<Start setPage={setPage} />} />
-                    <Route path='/home' element={<Home setPage={setPage} />} />
-                    <Route path='/projet/:id' element={<Projet setPage={setPage} />} />
+                    <Route path='/home' element={<Home setPage={setPage} dataProjets={dataProjets} setDataProjets={setDataProjets}/>} />
+                    <Route path='/projet/:id' element={<Projet setPage={setPage} dataProjets={dataProjets} />} />
                     <Route path='/contact' element={<Contact setPage={setPage} />} />
                     <Route path='/login' element={<Login setPage={setPage} />} />
                     <Route path='/avis' element={<Avis setPage={setPage} Log={Log} />} />
