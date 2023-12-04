@@ -83,15 +83,16 @@ function Projet({setPage, dataProjets}) {
     return (
         <section id="projet">
             <div id='img_projet'>
+
+                <img id='cover_img' src={Projet.cover} alt={Projet.name} />
+            <div id='info_projet'>
             {    
             1 <= prev &&  
                 <Link to={/projet/+prev}>      
                     <div id='prev' className='chevron_prev'>                    
                     </div>
                 </Link>
-            }
-                <img id='cover_img' src={Projet.cover} alt={Projet.name} />
-            <div id='info_projet'>                
+            }                
                 {
                     (Object.keys(Projet).length > 0) ?
                     Projet.languages.map( techno => (
@@ -104,8 +105,6 @@ function Projet({setPage, dataProjets}) {
                     {
                     lien(Projet)
                     }
-  
-            </div>
 
                 {    
                 dataProjets.length >= next &&  
@@ -114,6 +113,10 @@ function Projet({setPage, dataProjets}) {
                     </div>
                 </Link>
                 }
+  
+            </div>
+
+              
             </div>
             <div id='projet_description'>
                 <p>{Projet.description}</p>

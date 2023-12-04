@@ -24,7 +24,7 @@ function App() {
    const [dataProjets, setDataProjets] = useState([]);
 console.log(dataProjets)
    useEffect(() => {
-    fetch('datas/projetsOpenclassrooms.json'
+    fetch('../datas/projetsOpenclassrooms.json'
     ,{
         headers : { 
             'Content-Type': 'application/json',
