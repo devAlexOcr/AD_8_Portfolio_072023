@@ -46,13 +46,13 @@ function Login({setPage}) {
                     body: JSON.stringify(user)
                 }
             )
-            .then (res => {
+            .then (res => {     
                 return res.json();
             })
             .then(data => {
-            
+                console.log(data);
                 document.querySelector('form').reset();
-                console.log(data)
+                
                 if(data[0].status === '1'){
                     localStorage.setItem('CurrentUser', JSON.stringify(data));
                     Navigate('/avis')

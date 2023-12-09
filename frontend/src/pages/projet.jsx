@@ -11,6 +11,7 @@ function Projet({setPage, dataProjets}) {
     
     
     const [Projet, setProjet] = useState({});
+
     const Params = useParams();
     const Navigate = useNavigate();
     
@@ -38,8 +39,7 @@ function Projet({setPage, dataProjets}) {
             };
         })
     }else {
-            fetch('../datas/sideProjets.json',
-        {
+        fetch('../datas/sideProjets.json', {
           headers : { 
               'Content-Type': 'application/json',
               'Accept': 'application/json'
@@ -52,13 +52,14 @@ function Projet({setPage, dataProjets}) {
             const projet = data.find((projetUnique) => projetUnique.id === Params.id)
             if (projet){
                 setProjet(projet)
+
             }
             else {
                 Navigate('/projet-inexistant')
             };
         })
-        }
-    }, [Params.id, Navigate, setPage]);
+    }
+}, [Params.id, Navigate, setPage]);
 
 
 
@@ -80,18 +81,22 @@ function Projet({setPage, dataProjets}) {
     }
     const next = Number(Projet.id)+1;
     const prev = Number(Projet.id)-1;
+
+
     return (
+
+
         <section id="projet">
             <div id='img_projet'>
-
                 <img id='cover_img' src={Projet.cover} alt={Projet.name} />
             <div id='info_projet'>
+
             {    
-            1 <= prev &&  
-                <Link to={/projet/+prev}>      
-                    <div id='prev' className='chevron_prev'>                    
-                    </div>
-                </Link>
+                101 <= prev &&  
+                    <Link to={/projet/+prev}>      
+                        <div id='prev' className='chevron_prev'>                    
+                        </div>
+                    </Link>
             }                
                 {
                     (Object.keys(Projet).length > 0) ?
@@ -121,7 +126,7 @@ function Projet({setPage, dataProjets}) {
             <div id='projet_description'>
                 <p>{Projet.description}</p>
                    
-            {
+        {
                 Params.id <= 100 &&
             <>
                    <h3>compétences</h3>
